@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica", Sans-serif;
+}
+body{
+    background: url(https://thannahcoffee.com/wp-content/uploads/2021/12/BG-1-min.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.fadeInDown {
+    opacity: 0;
+	animation: fadeIn 1s ease-in both;
+}
+.zoom-out {
+    animation: zoom-out 1s ease-out ;
+  }
+  @keyframes zoom-out {
+    0% {
+      transform: scale(0.5, 0.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+.spin {
+    animation:spin 2s linear ;
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+.left-img{
+    position: absolute;
+    left: 53px;
+    top: 130px;
+}
+.right-img{
+    position: absolute;
+    right: 53px;
+    top: 130px;
+}
+.rotateInDownLeft{
+    animation:rotateInDownLeft 1s linear
+}
+
+@keyframes rotateInDownLeft{
+    from{
+        transform-origin:left bottom;
+        transform:rotate3d(0,0,1,-45deg);
+        opacity:0
+    }
+    to{
+        transform-origin:left bottom;
+        transform:none;
+        opacity:1
+    }
+}
+.rotateInDownLeft{
+    animation:rotateInDownLeft 1s linear
+}
+@keyframes rotateInDownLeft{
+    from{
+        transform-origin:left bottom;
+        transform:rotate3d(0,0,1,-45deg);
+        opacity:0
+    }
+    to{
+        transform-origin:left bottom;
+        transform:none;
+        opacity:1
+    }
+}
+@keyframes rotateIn{
+    from{
+        transform-origin:center;
+        transform:rotate3d(0,0,1,-200deg);
+        opacity:0
+    }
+    to{
+        transform-origin:center;
+        transform:none;
+        opacity:1
+    }
+}
+.rotateIn{
+    animation:rotateIn 1s linear
+}
+.section4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+.section4-content{
+    max-width: 1260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin: 40px auto;
+}
+.section4-content h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.section4-content p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.section4-col {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.section4-col img{
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+@media(max-width:900px){
+    .left-img,.right-img{
+        display: none;
+    }
+    .section4-col{
+        width: 100%;
+    }
+    .section4-content{
+        flex-direction: column;
+        padding: 15px;
+    }
+    .section4-content:nth-child(2),.section4-content:nth-of-type(4){
+        flex-direction: column-reverse;
+    }
+    .section4 p{
+        padding-bottom: 100px;
+    }
+    .section4-col img {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .section4{
+        padding: 100px 0px 100px 0px;
+    }
+}
+.section4 p{
+    line-height: 28px;
+}
+.fadeInLeft{
+    animation:fadeInLeft 1s linear
+}
+@keyframes fadeInLeft{
+    from{
+        opacity:0;
+        transform:translate3d(-100%,0,0)
+    }
+    to{
+        opacity:1;
+        transform:none
+    }
+}
+.fadeInRight{
+    animation:fadeInRight 1s linear;
+}
+@keyframes fadeInRight{
+    from{
+        opacity:0;
+        transform:translate3d(100%,0,0)
+    }
+    to{
+        opacity:1;
+        transform:none
+    }
+}
+
+
+

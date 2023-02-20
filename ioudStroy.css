@@ -1,0 +1,105 @@
+
+.story-first-row,.head_text{
+    display: flex;
+    max-width: 1270px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: 30px auto;
+    gap: 30px;
+}
+
+.story-section p{
+    line-height: 28px;
+}
+.story-first-row h1{
+    color: #BDA892;
+    font-family: "Montserrat", Sans-serif;
+    font-weight: 700;
+    margin: 60px 0px 50px 0px;
+    font-size: 64px;
+}
+.head_text h2{
+    font-family: "Montserrat", Sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+}
+.image-section{
+    display: flex;
+    justify-content: center;
+}
+.storyrow4,.last_row_section{
+    display: flex;
+    max-width: 1270px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: 30px auto;
+    gap: 30px;
+}
+.image-with-text-section,.image-section{
+    display: flex;
+    max-width: 1270px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: 30px auto;
+    gap: 30px;
+    align-items: center;
+}
+.img-with-text-col2 h1{
+    font-size: 64px;
+    font-weight: 700;
+}
+.img-with-text-col1,.img-with-text-col2,.storyrow1col1,.storyrow1col2{
+    width: 50%;
+}
+
+
+.storyrow4col1{
+    width: 66.66%;
+}
+.storyrow4col2{
+    width: 33.33%;
+
+}
+.story-section p{
+    font-size: 15px;
+}
+.last_row_col_1{
+    width: 33.33%;
+}
+.last_row_col_2{
+    width: 66.66%;
+}
+.last_row_col_1 img{
+    width: 100%;
+}
+.image-section img{
+    width: 100%;
+}
+.story-section img{
+    width: 100%;
+}
+@media(max-width:900px){
+    .img-with-text-col1,.img-with-text-col2,.storyrow1col1,.storyrow1col2,.last_row_col_2,.last_row_col_1,.storyrow4col1,.storyrow4col2{
+        width: 100%;
+    }
+    .storyrow4,.last_row_section,.story-first-row,.head_text,.image-with-text-section,.image-section{
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .image-with-text-section,.last_row_section{
+        flex-direction: column-reverse;
+    }
+    .img-with-text-col2 h1 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .storyrow1col1 h2{
+        font-size: 24px;
+    }
+    .storyrow1col1 img{
+        width: 100%;
+    }
+    .head_text h2{
+        font-size: 24px;
+    }
+}

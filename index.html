@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Site Under Maintenance</title>
+    <style>
+        body {
+            background-color: #F0F0F0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            animation: bounceIn 5s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #ff5733;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        @keyframes bounceIn {
+
+            from,
+            20%,
+            40%,
+            60%,
+            80%,
+            to {
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            }
+
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            40% {
+                transform: scale3d(0.9, 0.9, 0.9);
+            }
+
+            60% {
+                opacity: 1;
+                transform: scale3d(1.03, 1.03, 1.03);
+            }
+
+            80% {
+                transform: scale3d(0.97, 0.97, 0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale3d(1, 1, 1);
+            }
+        }
+
+        @media(max-width:900px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            img {
+                width: 60% !important;
+            }
+
+            .container {
+                padding: 10px;
+            }
+            .logo{
+                display: flex;
+                justify-content: center;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo"><img width="400px" src="https://static.mypaydo.com/media/1/attachments/paydo_logo_white_background.png" alt="">
+    </div>
+    <div class="container">
+        <h1>Site Under Maintenance</h1>
+        <p>We are currently performing maintenance on our site. We'll be back soon!</p>
+    </div>
+</body>
+
+</html>

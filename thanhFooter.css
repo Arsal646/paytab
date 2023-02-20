@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica", Sans-serif;
+}
+.footer_main_section {
+    color: white;
+    padding: 50px 0;
+    background: url(https://static.mypaydo.shop/media/thannh_906/BG-2-min-7105710e-5.jpg);
+}
+.MainFooter{
+    display: flex;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+.footercol{
+    width: 50%;
+}
+form{
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.input-field input,.input-field textarea{
+    border: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    color: white;
+
+}
+form{
+    margin: 20px 0;
+}
+.input-field input:focus{
+    outline: none;
+}
+form .input-field:nth-of-type(1){
+    flex: 1 1 48%;
+}
+form .input-field:nth-of-type(2){
+    flex: 1 1 48%;
+}
+form .input-field:nth-of-type(3){
+    flex: 1 1 100%;
+}
+form .input-field:nth-of-type(4){
+    flex: 1 1 100%;
+}
+form .input-field:nth-of-type(5){
+    flex: 1 1 100%;
+    align-items: flex-end;
+}
+
+
+.footer1{
+    display: flex;
+    flex-direction: column;
+}
+.footer1 img{
+    width: 35%;
+}
+.footer1 ul{
+    display: flex;
+    gap:20px;
+    list-style: none;
+    margin: 20px 0;
+}
+.footer1 a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+footer ul li{
+    list-style: none;
+}
+.form-btn a{
+    font-family: "Roboto", Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #E8B48F 0%, #54264A 100%);
+    border-radius: 25px 25px 25px 25px;
+    padding: 15px 30px 15px 30px;
+    color: white;
+    text-decoration: none;
+    width: 20%;
+    text-align: center;
+}
+.form-btn a:hover{
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #A45248 0%, #5E2154 100%);
+}
+.footer-menu{
+    padding: 30px 0;
+}
+.footer-menu a{
+    font-family: "Roboto", Sans-serif;
+    font-size: 20px;
+    transition: color 0.5s;
+}
+.footer1 a:focus,.footer1 a:hover{
+    color: #5e2154;
+}
+.footer-social a{
+    font-size: 24px;
+}
+.footer2 h2{
+    font-family: "Helvetica", Sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+.footer1 p{
+    font-size: 16px;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 700;
+}
+
+@media(max-width:900px){
+    .MainFooter{
+        flex-direction: column;
+    }
+    .footercol{
+        width: 100%;
+        padding-top:30px ;
+    }
+    .input-field{
+        flex: 1 1 100%;
+    }
+    .footer1 img {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .footer1 ul {
+        margin: 10px 0;
+    }
+    .form-btn a {
+        width: 35%;
+    }
+
+}

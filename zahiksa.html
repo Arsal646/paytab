@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {% load static i18n tags_commercial %}
+    {% base_currency_code invoice.account as currency_code %}
+    <style>
+        body {
+            margin: 0 !important;
+        }
+
+        .green-button {
+            background-color: #1c423a;
+            color: #fff;
+            border: none;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 23px;
+
+        }
+
+        .content-text p,
+        .content-text h3 {
+            padding-bottom: 3vh;
+        }
+
+        .logo {
+            max-height: 120px;
+            margin-top: -60px;
+        }
+    </style>
+    <div class="email-body"
+        style="background: #1c423a;padding: 5%;font-size:14px!important;letter-spacing: 3px;color:#fff;text-align: center;text-transform: uppercase;font-family: sans-serif;">
+        <div class="mainDiv"
+            style="background: white; padding: 11% 4%;border-collapse: collapse;border-spacing: 0;font-size: 100%;font: inherit;vertical-align: baseline;color:#1c423a;max-width: 600px;margin-left: auto;margin-right: auto;">
+            <div class="content-text">
+                <p><small>KSA.STAYZAHI.COM</small></p>
+                <h3>Order <br />Confirmation </h3>
+                {% if invoice.account.setting.logo %}
+                <p style="text-align: center;"><img style="width: 200px;" src="{{ invoice.account.setting.logo.url }}"
+                        alt="" width="200" /> </p>
+                {% endif %}
+                <p>{{ invoice.customer.name }},<br />
+                    Thank you for your order!</p>
+                <p>Your world is about to look & smell zahi-er!</p>
+                <p>Track your order<br />
+                    <a href="https://www.ksa.stayzahi.com/track?awb={{invoice.get_manifest.awb}}" class="green-button"
+                        style="background-color:#1c423a;color:#fff;border: none;padding: 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;border-radius: 21px;">Click
+                        here</a>
+                </p>
+                <p>Invoice Copy<br />
+                    <a href="{{invoice.get_public_url}}" class="green-button"
+                        style="background-color:#1c423a;color:#fff;border: none;padding: 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;border-radius: 21px;">Click
+                        here</a>
+                </p>
+            </div>
+
+        </div>
+        <div>
+            <span>
+                <!--src="{{ delivery_logo }}"-->
+                <img class="logo" style="margin-top: calc(-40px - 3%);padding-top:3%"
+                    src="https://static.mypaydo.shop/media/zahi_diffuser_544/bbad7d9e-00cb-4852-95c6-95abdf9ce16a.png"
+                    width="100" alt="" />
+            </span>
+        </div>
+        <p style="padding-bottom: 3%;" class="footer-logo">
+            <a href="https://www.instagram.com/stayzahi.sa/"><img style="width: 30px;" width="30"
+                    src="https://static.mypaydo.shop/media/zahi_diffuser_544/d403e2a8-a4a1-4a39-976f-330f991c167c.png"
+                    alt="" /></a>
+            <a href="https://www.google.com/maps/dir/29.2977121,47.7144588/Riyadh+Park/@27.0085905,45.1720443,7z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3e2ee3c5e178b15f:0xaeffa585edc3f95b!2m2!1d46.6301956!2d24.7558509?hl=en-kw"><img width="30" style="width: 22px;"
+                    src="https://static.mypaydo.shop/media/zahi_diffuser_544/961b9222-e373-4d03-80ae-b6d22ed6f044.png"
+                    alt="" /></a>
+        </p>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+<p>تم تأكيد طلبك<br />
+    {{invoice.get_customer_name}}<br /><br />
+     شكرا لطلبك!<br />
+    ..ًاوشك عالمك ان يبدو زاهي<br /><br />
+    وسيتم تسليمه في أقرب وقت ممكن. لتتبع طلبك اضغط على الرابط أدناه
+    <br />
+    https://ksa.stayzahi.com/track?awb={{ invoice.get_manifest.awb }}</p><br />
+
+    الرياض بارك، حي العقيق، طريق الدائري الشمالي الفرعي<br />
+
+    https://g.page/riyadh-park-mall?share<br /><br />
+    https://instagram.com/stayzahi.sa?igshid=MDE2OWE1N2Q=

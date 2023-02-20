@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.final_section .final_section_content {
+    background: none !important;
+    color: black !important;
+    height: auto !important;
+}
+
+
+body{
+    width: 100% !important;
+}
+
+
+.hero_section_content {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    height: 900px !important;
+}
+
+
+.hero_section{
+    background: url(https://static.mypaydo.shop/media/crushed_kuwait_540/Crushed-Grid-06-cd112fd3-3.jpg);
+    background-size: fill;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.final_section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none !important;
+
+}
+.hero_section h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin: 20px 0;
+}
+.hero_section_content{
+
+    width: 80vw;
+    background-color: rgb(0 0 0 / 50%);
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+.final_section .final_section_content{
+background: none !important;
+color: black !important;
+}
+.hero_section_rating{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    width: 60vw;
+}
+.hero_section_rating img{
+    width: 200px;
+}
+.hero_top_content .payment{
+    width: 20vw;
+}
+.star{
+
+    margin: 10px 0;
+}
+.btn{
+    text-decoration: none;
+    color: black;
+    font-weight:bold;
+    margin: 20px 0;
+    background-color: #41e26a;
+    padding: 10px 80px;
+    border-radius: 5px;
+    border: none;
+}
+.hero_top_content button a, .category button a{
+    text-decoration: none;
+    color: white;
+}
+.hero_top_content button,.category button{
+    background-color: #41e26a;
+    padding: 10px 80px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border: none;
+
+}
+.hero_top_content{
+    width: 60vw;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center
+}
+
+
+
+
+.promise_section{
+    margin-top: 50px !important;
+    display: flex;
+    column-gap: 100px;
+    row-gap: 10px;
+    justify-items: center;
+    margin: 0 15vw;
+    text-align: center;
+}
+.promise{
+    flex-basis: 33.33%;
+}
+.icon{
+    font-size: 50px;
+}
+
+
+
+.category_section{
+    display: flex;
+    margin: 40px 15vw;
+    column-gap: 10px;
+     flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: center;
+}
+.category img{
+    width: 250px;
+}
+.category{
+    flex-basis: 30.33%;
+    text-align: center;
+    padding: 10px;
+    background: rgb(184 182 182 / 18%);
+    border-radius: 10px;
+
+}
+.promise p{
+    font-size: 16px;
+}
+
+@media(max-width:900px){
+    .hero_section_content ,.hero_top_content{
+        width: 100%;
+    }
+    .hero_section_rating{
+        width: 100%;
+        margin: 40px 0;
+    }
+    .payment{
+        width: 250px !important;
+    }
+    .hero_section_rating img {
+        width: 120px;
+    }
+    /* .promise_section{
+        margin: 0 10px;
+        column-gap: 10px;
+    } */
+}
+@media(max-width:800px){
+
+.hero_section{
+    background: url(https://static.mypaydo.shop/media/crushed_kuwait_540/1-c52cba05-0.jpg) !important;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero_section{
+
+    width: 100%;
+    height: 700px !important;
+
+}
+
+.hero_section_content {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+        height: 700px !important;
+
+}
+
+    /* .promise{
+        flex-basis: 100%;
+    } */
+    .category_section{
+        row-gap: 20px;
+        margin: 40px 5vw;
+    }
+    .category_section {
+        display: flex;
+        /* margin: 40px 15vw; */
+        column-gap: 10px;
+        /* flex-wrap: wrap; */
+        row-gap: 20px;
+         justify-content: flex-start;
+        overflow-x: auto;
+    }
+    .category{
+        flex-basis: 100%;
+    }
+    /* .promise_section{
+        margin-top: 50px;
+       flex-direction: column;
+       row-gap: 30px;
+    } */
+    .work_step{
+        margin: 10px;
+        margin-top: 20px !important;
+    }
+    .promise_section{
+        margin: 40px 10px;
+        column-gap: 10px;
+    }
+    .promise p{
+        font-size: 9px;
+    }
+
+}
+@media(max-width:1300px){
+    .promise_section{
+        margin: 40px 10px;
+        column-gap: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.faq_section{
+    display: flex;
+    margin: 0 15vw;
+    gap: 20px;
+}
+.faq_section > div {
+	width: 90%;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+
+.faq_section details div {
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 1.5em;
+}
+
+.faq_section details div > * + * {
+	margin-top: 1.5em;
+}
+
+.faq_section details + details {
+	margin-top: .5rem;
+}
+
+.faq_section summary {
+	list-style: none;
+}
+
+.faq_section summary::-webkit-details-marker {
+	display: none;
+}
+
+.faq_section  summary {
+	border: 1px solid #000;
+	padding: .75em 1em;
+	cursor: pointer;
+	position: relative;
+	padding-left: calc(1.75rem + .75rem + .75rem);
+}
+.star {
+    margin: 10px 0;
+    color: #ff9c22;
+}
+
+.faq_section summary:before {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: .75rem;
+	content: "+";
+	width: 1.75rem;
+	height: 1.75rem;
+	background-color: #000;
+	color: #FFF;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.faq_sectiondetails[open] summary {
+	background-color: #eee;
+}
+
+.faq_section details[open] summary:before {
+	content: "-";
+}
+
+.faq_section summary:hover {
+	background-color: #eee;
+}
+
+.faq_section a {
+	color: inherit;
+	font-weight: 600;
+	text-decoration: none;
+	box-shadow: 0 1px 0 0;
+}
+
+.faq_section a:hover {
+	box-shadow: 0 3px 0 0;
+}
+
+.faq_section code {
+	font-family: monospace;
+	font-weight: 600;
+}
+
+.gallery_section{
+    display: flex;
+    margin: 50px 15vw;
+    gap:10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.gallery_section img{
+    width: 100px;
+}
+@media(max-width:900px){
+    .faq_section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+    }
+    .faq_section > div {
+        width: 90%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0;
+    }
+    .gallery_section{
+        margin: 10px;
+    }
+    .promise h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .hero_section{
+        height: auto;
+    }
+    .promise h2 {
+    height: 35px;
+}
+.category img {
+    width: 160px;
+}
+
+
+}
+
+.cat_head{
+margin:10px auto !important;
+
+}
+.cat_head h2 {
+    font-size: 30px !important;
+}
+.hero_top_content {
+    padding: 20px 0;
+}
+
+.hero_section_content {
+    width: 100%;
+        margin: 0;
+    border-radius: 0;
+}
+
+.banner-row1{
+    width: 40%;
+}
+@media(max-width:800px){
+    .banner-row1{
+        width: 100%;
+    }
+}
+.security{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.security span{
+    width: 200px;
+    text-align: left;
+    font-size: 24px !important;
+    position: relative;
+    top: -2px;
+    left: 9px;
+
+}
+.security img{
+    width: 30px !important;
+    height: 30px !important;
+}
+.security div:nth-of-type(1){
+    width: 40px;
+}

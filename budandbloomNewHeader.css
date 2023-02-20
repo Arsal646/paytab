@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.wrap {
+    width: 100%;
+}
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    direction: initial;
+}
+.searchTerm {
+    width: 100%;
+    border: 2px solid #98cb21;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 0;
+    outline: none;
+    color: #9DBFAF;
+    font-size: 16px;
+}
+.searchButton {
+    width: 76px;
+    height: 50px;
+    border: 1px solid #41663e;
+    background: #41663e;
+    text-align: center;
+    color: #fff;
+    /* border-radius: 0 5px 5px 0; */
+    cursor: pointer;
+    font-size: 20px;
+}
+button.searchButton:after {
+    height: 30px;
+    background-image: url(https://static.mypaydo.shop/media/grow_it_green_600/icon-01.png);
+    width: 28px;
+    content: '';
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+}
+.header-main-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-col1{
+    width: 50%;
+}
+.header-col2{
+    width: 40%;
+}
+.header-col3{
+    width: 10%;
+}
+.header-col1 img{
+width: 100%;
+}
+.header-col3 img{
+    width: 100%;
+}
+.header-col4{
+    display: none;
+}
+@media(max-width:767px){
+    .header-main-row{
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .header-col1{
+        width: 80%;
+    }
+    .header-col2 {
+        display: none;
+    }
+    .header-col3 {
+        width: 20%;
+    }
+    .header-col4{
+        display: block;
+        width: 100%;
+    }
+    .searchTerm {
+
+        height: 24px;
+        font-size: 14px;
+    }
+    .searchButton {
+        height: 38px;
+    }
+    button.searchButton:after {
+        height: 22px;
+        background-size: contain;
+        top: 8px;
+    right: 12px;
+    }
+
+}

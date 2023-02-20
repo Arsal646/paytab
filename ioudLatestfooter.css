@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+.footer_main_section{
+    padding-left: 35px;
+    padding-right: 35px;
+    background: url(https://static.mypaydo.shop/media/ioud_store_ksa_222/background-dfaa63b3-4.jpg);
+}
+.footer_main_section *{
+    font-family: 'Montserrat', sans-serif !important;
+    color: #666666;
+}
+.footer_row2{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 20px;
+}
+.footer_row1{
+    display: flex;
+    justify-content: center;
+
+}
+.footercol{
+    width: 33.33%;
+    padding: 20px;
+}
+.footer_logo{
+    width: 150px;
+    margin-bottom: 30px;
+}
+.footercol1 p,.footercol4 p{
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 600;
+}
+
+.footer_social{
+    display: flex;
+    margin: 30px 0;
+    justify-content: space-between;
+    width: 150px;
+}
+.footercol ul{
+    list-style: none;
+}
+.footercol ul li{
+    margin: 15px 0;
+}
+.footercol a{
+    text-decoration: none;
+}
+.subscribe_us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+.subscribe_col1{
+    display: flex;
+    flex-direction: column;
+}
+.subscribe_us input{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    outline: none;
+    margin: 10px 0;
+    border: none;
+}
+.subscribe_us input:focus{
+    outline: none;
+}
+.customer_service_text{
+    font-weight: 600;
+}
+
+@media(max-width:900px){
+    .footer_row2,.footer_row1{
+        flex-direction: column;
+    }
+    .footercol{
+        width: 100%;
+    }
+    .footercol2,.footercol3,.footercol4{
+        display: none;
+    }
+    .footer_main_section {
+        padding: 0px;
+    }
+    .footer_row2{
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer_row2 p{
+        text-align: center;
+    }
+}

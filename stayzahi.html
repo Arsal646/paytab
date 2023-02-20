@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footrer</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        .footer {
+            position: relative;
+            padding: 0px 50px 53px 50px;
+        }
+        .top-footer {
+            padding: 60px 0 60px;
+            border: solid #f3f3f3;
+            border-width: 1px 0;
+        }
+        .sec-footer {
+            margin-top: 57px;
+        }
+        .footer-head {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px !important;
+        }
+        .about-text {
+            font-size: 16px;
+            line-height: 1.875;
+            color: #5e5e5e;
+            font-weight: 600;
+        }
+        .dealer-btn {
+            height: 43px;
+            width: 120px;
+            border-radius: 3px;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e95a0c;
+            margin: 30px auto 0;
+            transition: all .3s ease-in-out;
+        }
+        .list-unstyled {
+            padding-left: 0;
+            list-style: none;
+            padding-right: 0;
+        }
+        .foot-li {
+            margin-bottom: 7px;
+            font-weight: 500;
+        }
+        html[dir=ltr] .foot-a:focus,
+        html[dir=ltr] .foot-a:hover {
+            transform: translateX(5px);
+        }
+        html[dir=rtl] .foot-a:focus,
+        html[dir=rtl] .foot-a:hover {
+            transform: translateX(-5px);
+        }
+        .foot-a:focus,
+        .foot-a:hover {
+            transform: translateX(-5px);
+            color: #999;
+        }
+        .last-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            font-size: 15px;
+            margin-top: 25px;
+        }
+        .footer-img {
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+        }
+        .socials {
+            display: flex;
+            align-items: center;
+        }
+        .social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #5e5e5e;
+            border-radius: 50%;
+            background-color: #f7f7f7;
+            width: 46px;
+            height: 46px;
+            transition: all .3s ease-in-out;
+        }
+        html[dir=ltr] .social~.social {
+            margin-left: 8px;
+        }
+        html[dir=rtl] .social~.social {
+            margin-right: 8px;
+        }
+        .social:focus,
+        .social:hover {
+            color: #fff;
+            background-color: #5e5e5e;
+        }
+        html[dir=ltr] .footer-img {
+            right: -60px;
+        }
+        html[dir=rtl] .footer-img {
+            left: -60px;
+        }
+        .feat .feat-name {
+            font-size: 18px;
+            font-weight: 500;
+            color: #5e5e5e;
+        }
+        .fixall {
+            margin: 0;
+            border: none;
+            outline: 0;
+            box-shadow: none;
+            padding: 0;
+            text-decoration: none;
+        }
+        a.c1 {
+            text-decoration: none;
+        }
+        a.c1:before {
+            display: inline-block;
+            width: 16px;
+            height: 11px;
+            content: "";
+            background: url(flags.6989ab0aa64f0b97.png);
+            background-position: -36px -1144px;
+        }
+        a.c2 {
+            text-decoration: none;
+        }
+        a.c2:before {
+            display: inline-block;
+            width: 16px;
+            height: 11px;
+            content: "";
+            background: url(flags.6989ab0aa64f0b97.png);
+            background-position: -72px -780px;
+        }
+        a.c3 {
+            text-decoration: none;
+        }
+        a.c3:before {
+            display: inline-block;
+            width: 16px;
+            height: 11px;
+            content: "";
+            background: url(flags.6989ab0aa64f0b97.png);
+            background-position: -72px -936px;
+        }
+        a.c4 {
+            text-decoration: none;
+        }
+        a.c4:before {
+            display: inline-block;
+            width: 16px;
+            height: 11px;
+            content: "";
+            background: url(flags.6989ab0aa64f0b97.png);
+            background-position: 0 -26px;
+        }
+        @media (max-width: 767px) {
+            .footer {
+                padding: 30px 0 47px;
+            }
+            .nav-foot-cont,
+            .newsletter-cont {
+                margin-bottom: 25px;
+            }
+            .footer-img {
+                display: none;
+            }
+        }
+        .socials {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <footer style="border-top: 1px solid #ddd;">
+        <div class="container">
+            <div class="footer">
+                <div class="sec-footer">
+                    <div class="row">
+                        <div class="col">
+                            <div class="nav-foot-cont">
+                                <h3 class="footer-head fixall nav-foot-head" style="text-align: left;"><span
+                                        style="color:#000000; letter-spacing:4px;">MORE</span></h3>
+                                <ul class="foot-nav fiall list-unstyled">
+                                    <li class="foot-li" style="text-align: left;"><a class="foot-a fixall"
+                                            href="/home"><span
+                                                style="color:#000000; letter-spacing:4px;">HOME</span></a></li>
+                                    <li class="foot-li" style="text-align: left;"><a class="foot-a fixall"
+                                            href="/shop"><span
+                                                style="color:#000000; letter-spacing:4px;">PRODUCTS</span></a></li>
+                                    <li class="foot-li" style="text-align: left;"><a class="foot-a fixall"
+                                            href="/support"><span
+                                                style="color:#000000; letter-spacing:4px;">CONTACT</span></a></li>
+                                    <li class="foot-li" style="text-align: left;"><a class="foot-a fixall"
+                                            href="/about-us"><span
+                                                style="color:#000000; letter-spacing:4px;">ABOUT</span></a></li>
+                                    <li class="foot-li" style="text-align: left;"><a class="foot-a fixall"
+                                            href="/track"><span style="color:#000000; letter-spacing:4px;">TRACK
+                                                ORDER</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="nav-foot-cont">
+                                <h3 class="footer-head fixall nav-foot-head"><span
+                                        style="color:#000000;letter-spacing:4px">ABOUT US</span></h3>
+                                <p><span style="color:#000000;">There is nothing more refreshing than walking into a
+                                        blooming space that lifts your spirit and transports you into a peaceful and zen
+                                        space. ZAHI wants you to spend more time indoors than ever before.<br />
+                                        <br />
+                                        Relax, unwind, and enjoy the ZAHI scent.</span></p>
+                            </div>
+                        </div>
+                        <div class="col col-md-4">
+                            <div class="social-cont">
+                                <div class="socials"><a href="https://www.instagram.com/stayzahi/">
+                                        <ion-icon name="logo-instagram"></ion-icon>
+                                    </a>&nbsp;&nbsp;<strong><a
+                                            href="https://www.google.com/maps/dir/29.2977121,47.7144588/Riyadh+Park/@27.0085905,45.1720443,7z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3e2ee3c5e178b15f:0xaeffa585edc3f95b!2m2!1d46.6301956!2d24.7558509?hl=en-kw"><img
+                                                alt="map"
+                                                src="https://static.mypaydo.shop/media/zahi_diffuser_544/1824bb0a-0def-4de4-b37f-a3d74d59ef25.png"
+                                                style="width: 20px; height: 20px; font-weight: bolder;" /></a></strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="last-footer">
+                    <div class="copyright" style="text-align: center;margin-bottom: 15px;">
+                        <a style="cursor: pointer;text-decoration: none;color: #000000;" class="external" onclick="window.open('tel:22207001')">Customer services : 22207001</a>
+                    </div>
+                    <div class="copyright" style="text-align: center;"><span style="color:#000000;">&copy; 2021. All
+                            rights reserved.</span></div>
+                    <div class="pay" style="text-align: center;"><span style="color:#000000;"><img
+                                class="img-responsive"
+                                src="https://static.mypaydo.shop/media/zahi_diffuser_544/a7441f59-92ea-40ac-b7fb-710334f324e8.jpeg"
+                                style="height: 60px;" /></span></div>
+                </div>
+                <div class="footer-img" style="text-align: center;">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1140 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;800&display=swap');
+
+app-header-zone {
+    position: relative;
+    z-index: 999999 !important;
+}
+#products:hover ~ #dynamic-element-4-47{
+border:2px solid red;
+z-index:-1
+}
+ @media(max-width:900px){
+ .mega-box .content {
+    display:block;
+}
+.mega-box{
+ --webkit-transform: translate3d(0,0,1px);
+    transform: translate3d(0,0,1px);
+    --webkit-overflow-scrolling: auto !important;
+}
+.swiper-wrapper {
+    --webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+ion-slides {
+    --webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+ }
+#products:hover ion-slide{
+ position:relative;
+        z-index: -1;
+    }
+    .mega-box .content{
+    position:relative;
+    }
+ion-tabs ion-content{
+   --background: url(https://static.mypaydo.shop/media/grow_it_green_600/Picsart_22-03-10_15-40-43-951-0076a304-3.jpg)  no-repeat bottom center  / cover; ;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  }
+  @media (max-width: 800px) {
+  ion-tabs ion-content{
+   --background: url(https://static.mypaydo.shop/media/grow_it_green_600/latest-f2a053c4-a.jpg) no-repeat center center fixed !important;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  }}
+  .searchTerm {
+      background: white !important;
+  }
+  [_nghost-microapps-c210] .zone-container[_ngcontent-microapps-c210] {
+    background:transparent !important;
+  }
+  .text-center {
+    text-align:center;
+  }
+  .product-container .bottom-container {
+  box-shadow:none !important;
+  }
+  .product-container{
+  border: 0.5px solid var(--ion-color-medium) !important;
+  }
+  .footer_new{
+      background: #C4A484 !important;
+  }
+  .Des_main_div h2{
+  font-weight:bold;
+  }
+  .slider-absolute-container{
+  border:none !important;
+  }
+  Des_main_div h3{
+  font-weight:bold;
+  }
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .col-1 {
+    -ms-flex: 0 0 8.333333%;
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+  }
+  .col-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  .col-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .col-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+  .col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+  }
+  .col-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+  .col-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-10 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+  .col-11 {
+    -ms-flex: 0 0 91.666667%;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+  }
+  .col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  @media (min-width: 768px) {
+    .col-md {
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+    .col-md-auto {
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      width: auto;
+      max-width: 100%;
+    }
+    .col-md-1 {
+      -ms-flex: 0 0 8.333333%;
+      flex: 0 0 8.333333%;
+      max-width: 8.333333%;
+    }
+    .col-md-2 {
+      -ms-flex: 0 0 16.666667%;
+      flex: 0 0 16.666667%;
+      max-width: 16.666667%;
+    }
+    .col-md-3 {
+      -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+    .col-md-4 {
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+    .col-md-5 {
+      -ms-flex: 0 0 41.666667%;
+      flex: 0 0 41.666667%;
+      max-width: 41.666667%;
+    }
+    .col-md-6 {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    .col-md-7 {
+      -ms-flex: 0 0 58.333333%;
+      flex: 0 0 58.333333%;
+      max-width: 58.333333%;
+    }
+    .col-md-8 {
+      -ms-flex: 0 0 66.666667%;
+      flex: 0 0 66.666667%;
+      max-width: 66.666667%;
+    }
+    .col-md-9 {
+      -ms-flex: 0 0 75%;
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+    .col-md-10 {
+      -ms-flex: 0 0 83.333333%;
+      flex: 0 0 83.333333%;
+      max-width: 83.333333%;
+    }
+    .col-md-11 {
+      -ms-flex: 0 0 91.666667%;
+      flex: 0 0 91.666667%;
+      max-width: 91.666667%;
+    }
+    .col-md-12 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  [_nghost-microapps-c249] #product-name[_ngcontent-microapps-c249] {
+      height: 2.5em;
+      line-height: calc(2.5em / 2);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      block-size: auto;
+  }
+  .swiper-pagination {
+      position: unset !important;
+  }
+  .arrow-button-slider>ion-icon {
+  --ion-color-base: var(--ion-color-primary, #3880ff) !important;
+  }
+  .change-language-button {
+  color:var(--ion-color-primary, #3880ff) !important;
+  }
+  @media only screen and (max-width: 600px) {
+    .slider-dynamic-image {
+      width: 100% !important;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+  .category-container {
+      border: none!Important;
+  padding-top: 30px;
+      padding-bottom: 30px;
+  }
+  .product-container .bottom-container {
+  box-shadow:none;
+  }
+  .product-container {
+  border: 1px solid #a6d23c;
+  }
+  .tracking-page-card ion-card-content ion-label {
+      color: #000;
+      margin-right: 15px;
+  }
+  .create-account-label {
+      color: #a5d23c!important;
+  }
+  .header-safe-area .button .sc-ion-label-ios-s {
+      font-size: 20px;
+      color: #41663e;
+      font-weight: 400;
+  }
+  @media (max-width: 576px) {
+  .header-safe-area .button .sc-ion-label-ios-s {
+    font-size:13px;
+      color: #41663e;
+      font-weight: 400;
+  }
+  }
+  #categories-page-container ion-label {
+      color: #000;
+  }
+  .header-safe-area ion-badge {
+   border: 1px solid!important;
+      padding: 2.5px 4px!important;
+  }
+  .icon-inner, .ionicon, svg {
+     color: #436841!important;
+  }
+  .brand-container {
+      border: none!important;
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+  #support-page-container ion-label {
+      display: none;
+  }
+   .product-name {
+      height: 2.5em;
+      line-height: calc(2.5em / 2);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      block-size: auto;
+  }
+  .product-container {
+      border: none!important;
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+  .payment_icon img {
+        float: unset !important;
+  }
+  .ion-color-secondary {
+      --ion-color-base: #ffffff!important;
+      --ion-color-base-rgb: var(--ion-color-secondary-rgb,61,194,255)!important;
+      --ion-color-contrast: var(--ion-color-secondary-contrast,#fff)!important;
+      --ion-color-contrast-rgb: var(--ion-color-secondary-contrast-rgb,255,255,255)!important;
+      --ion-color-shade: #ffffff!important;
+      --ion-color-tint: #ffffff!important;
+  }
+  .footer {
+      float: left;
+      width: 100%;
+      text-align: center;
+  }
+  .cash_icon {
+      width: 30px!important;
+  }
+  .gift_icon {
+      width: 31px!Important;
+  }
+  .social_footer {
+      border-top: 1px solid #ffffff4f;
+      margin-top: 30px;
+      margin-bottom: 10px;
+  }
+  .copyright p {
+      font-family: 'Comfortaa', cursive;
+      color: #fff;
+      font-size: 16px;
+  }
+  .payment_icon {
+      text-align: center !important;
+      margin-bottom: 25px;
+  }
+  .payment_icon img {
+      width: 150px;
+  }
+  .social_footer ul li {
+      display: inline-block;
+      padding: 15px;
+      list-style-type:none;
+  }
+  .social_footer ul {
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type:none;
+  }
+  .social_footer ul li a {
+      color: #fff;
+      font-size: 18px;
+  }
+  .links h3 {
+      color: #fff;
+      font-family: 'Comfortaa', cursive;
+      font-size: 15px;
+      text-align: left;
+  }
+  .links ul {
+      list-style: none;
+      padding: 0;
+  }
+  .links li a {
+      color: #fff;
+      line-height: 2.3;
+  }
+  .footer_new {
+      background: #a6d23d;
+      padding-top: 50px;
+  }
+  .delivery_text {
+      text-align: center;
+  }
+  .delivery_text img {
+      width: 40px;
+  }
+  .delivery_text {
+      font-family: 'Comfortaa', cursive;
+      color: #00194f;
+  }
+  .deliverysec {
+      background: #e7f1fd;
+      padding-top: 30px;
+      padding-bottom: 10px;
+  }
+  .instagram_sec img {
+      width: 37px;
+  }
+  .insta_text button {
+      text-align: center;
+      background: #00194f;
+      color: #fff;
+      padding: 8px 30px;
+      border-radius: 22px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+  .instagram_sec h2 {
+      font-family: 'Comfortaa', cursive;
+      color: #00194f;
+  }
+  .insta_text p {
+      font-family: 'Comfortaa', cursive;
+      color: #00194f;
+      margin-top: 20px;
+      margin-bottom: 50px;
+  }
+  .header-safe-area {
+      --background: #a6d23d;
+      border: none;
+  }
+  .bakhoor_bg {
+      background-image: url(https://static.mypaydo.shop/media/alshaya_perfumes_423/discover.png)!important;
+  background-size: cover;
+      width: 100%;
+      max-height: 100%;
+      background-repeat: no-repeat;
+      padding: 50px;
+  }
+  .toolbar-background {
+    background: #05164f;
+  }
+  .insta_text p {
+      font-family: 'Comfortaa', cursive;
+      color: #00194f;
+      margin-top: 20px;
+      margin-bottom: 50px;
+  }
+  .arrow img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-top: 50px;
+      margin-bottom: 50px;
+  }
+  .line h2:before {
+      content: "";
+      border: 1px solid;
+      width: 19%;
+      position: absolute;
+      margin-top: 38px;
+      left: 25%;
+  }
+  .padding-top {
+      margin-top: 50px;
+  }
+  .product_btn button {
+      margin-top: 30px;
+  }
+  .line h2:after {
+      content: "";
+      border: 1px solid;
+      width: 19%;
+      position: absolute;
+      margin-top: 38px;
+      margin-left: 22px;
+  }
+  .instagram_sec {
+      padding: 50px;
+      text-align: center;
+  }
+  .text_grafrance button {
+      text-align: center;
+      background: #00194f;
+      color: #fff;
+      padding: 8px 30px;
+      border-radius: 22px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+  .text_grafrance p {
+      font-family: 'Comfortaa', cursive;
+      font-size: 25px;
+      text-align: center;
+      color:#00194F;
+  }
+  .frag_margin{
+  margin-top: 200px;
+  }
+  .bakhoor_fragrance h2{
+      margin-top: 80px;
+      margin-bottom: 50px;
+  }
+  .header-safe-area ion-label:after {
+      display: none!important;
+  }
+  .header-safe-area ion-label:before {
+      display: none!important;
+  }
+  .new_fragrance {
+      /*background-image: url(https://static.mypaydo.shop/media/alshaya_perfumes_423/newbackground_SdC3xEe.png);*/
+     background:#E7F1FD;
+      background-size: cover;
+      width: 100%;
+      max-height: 100%;
+     background-repeat: no-repeat;
+      padding: 50px;
+  }
+  .footer {
+     background-color: #6e1f60;
+  }
+  .new_fragrance h2 {
+      text-align: center;
+      font-family: 'Italianno', cursive;
+      font-size: 61px;
+      color: #00194F;
+  }
+  .text_grafrance {
+      width: 50%;
+      float: left;
+  }
+  .image_fragrance {
+      width: 50%;
+      float: left;}
+  .footer {
+      float: left;
+      width: 100%;
+      text-align: center;
+  }
+  @media screen and (max-width: 480px) {
+     .graph_chart iframe{
+     width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+  .gold_text {
+      width: 100%;
+      float: left;
+      margin-top: 9px;
+  }
+  .gold_text p {
+      line-height: 1.5;
+      font-family: 'Tajawal', sans-serif;
+      text-align: end;
+      font-size: 14px;
+  }
+  .gold-image {
+      width: 100%;
+      float: left;
+  }
+  .gold-image img {
+      width: 100%;
+      float: none;
+  }
+  .ads_banner img {
+     margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 100%;
+  }
+  .graph iframe {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+  }
+   @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+   body {
+       background-color: #eeeeee;
+       font-family: 'Open Sans', serif;
+       font-size: 14px
+   }
+  footer .footer-copyright {
+       margin-top: 13px
+   }
+   footer a {
+       text-decoration: none !important;
+       color: #777a7c
+   }
+   footer .description {
+       font-size: 12px
+   }
+   footer .fa-facebook-f {
+       color: #3b5999
+   }
+   footer .fa-instagram {
+       color: #e4405f
+   }
+   footer .fa-youtube {
+       color: #cd201f
+   }
+  footer .fa-twitter {
+       color: #55acee
+   }
+  footer .footer-copyright p {
+       margin-top: 10px
+   }
+  @media only screen and (max-width: 600px) {
+  .Gold {
+      padding-top: 150px;
+      margin-bottom: 2px;
+      margin-top: -150px;
+      padding-bottom: 0px;
+  }
+          .footer_logo img {
+              margin-right: 98px;
+              width: 150px;
+              margin-top: 30px;
+          }
+          .about_footer.d-flex {
+              margin-right: 180px;
+              margin-top: 33px;
+              width: 50%;
+          }
+   .bg_footer {
+              background: #723f71;
+              color: #fff;
+          }
+          .bg_footer a {
+              color: #fff;
+          }
+     .bg_footer {
+      padding-top: 50px;
+      margin: 0px;
+      padding-right: 0px;
+  }
+  .footer_colm {
+      margin-left: 0px;
+  }
+  .footer_row h6 {
+      font-size: 13px;
+  }
+  .footer_row li {
+      font-size: 11px;
+      line-height: 2;
+  }
+  .footer_row {
+      margin-right: -22px;
+  }
+  .download_btn {
+      width: 100%;
+  padding-left: 15px;
+  }
+  .social_btn {
+      width: 100%;
+  padding-left: 15px;
+  }
+  .social_btn a {
+      background: transparent;
+      border: none;
+      margin-top: 5px;
+      margin-bottom: 5px;
+  }
+  .text-muted {
+      color: #fff!important;
+      text-align: center;
+      padding: 0px;
+      margin-bottom: 0;
+  }
+  .pay_icon img {
+      width: 100%;
+      text-align: center;
+  }
+  }
+  .desktop_foot_bg a.btn-icon {
+  color:#6b184d;
+  }
+  .container-fluid.desktop_foot_bg {
+  margin-top:0;
+  }
+  .toolbar-background {
+      background: #3737a6;
+  }
+  .Gold {
+      padding-top: 15px;
+      margin-bottom: 6px;
+      margin-top: 0px;
+      padding-bottom: 0px;
+  }
+  .btn-icon {
+      color: #6b184d!important;
+  }
+  .btn-icon {
+      background: transparent;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding: 5px 7px 0px;
+  }
+  .desktop_foot_bg {
+      padding-top: 25px;
+      background: #6b184d;
+      padding-right: 100px;
+  }
+  .desktop_foot_bg h6 {
+      color: #fff;
+  }
+  .desktop_foot_bg a {
+      color: #fff;
+  }
+  .footer
+  {
+     background-color: #6e1f60;
+  }
+  .boxed {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      max-width: 960px;
+  }
+  .gold-image {
+      width: 50%;
+      float: left;
+  }
+  .gold_text {
+      width: 35%;
+      float: left;
+  }
+  .gold-image img {
+      width: 70%;
+      float: right;
+  }
+  .gold_text p {
+      line-height: 3;
+      font-family: 'Tajawal', sans-serif;
+      text-align: end;
+      font-size: 20px;
+  }
+  .ads_banner {
+      width: 100%;
+      float: left;
+      margin-top: 25px;
+  }
+  .ads_banner img {
+     margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 69%;
+  }
+  .graph {
+      width: 100%;
+      float: left;
+      margin-top: 25px;
+  }
+  .graph iframe {
+      width: 69%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+  .graph_chart{
+     width: 100%;
+      float: left;
+      margin-top: 25px;
+  }
+  .graph_chart iframe{
+     width: 69%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+  .dataTable tr {
+      background: #eecc05!important;
+  }
+  .odd {
+      background: #FDEECB!Important;
+  }
+  .instagram_posts {
+      width: 100%;
+      float: left;
+  }
+  .eapps-instagram-feed-title{
+     font-family: 'Tajawal', sans-serif!Important;
+  }
+  @media only screen and (max-width: 600px) {
+  .new_fragrance {
+   padding: 50px 0px;
+  }
+  .frag_margin {
+      margin-top: 0;
+      margin-bottom: 50px;
+  }
+  .text_grafrance p {
+      font-size: 18px;
+  margin-top: 20px;
+      margin-bottom: 20px;
+  }
+  .line h2:before {
+      content: none;
+      border: 1px solid;
+      width: 19%;
+      position: absolute;
+      margin-top: 38px;
+      left: 17px;
+  }
+  .line h2:after {
+      content: none;
+      border: 1px solid;
+      width: 19%;
+      position: absolute;
+      margin-top: 38px;
+      left: 17px;
+  }
+  .mobile_view .image_fragrance {
+      margin-bottom: 20px;
+  }
+  .new_fragrance h2 {
+      text-align: center;
+      font-family: 'Italianno', cursive;
+      font-size: 40px;
+      color: #00194F;
+  }
+  .arrow img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 20px;
+  }
+  .bakhoor_bg .row {
+      flex-direction: column-reverse;
+  }
+  .bakhoor_bg {
+      background-image: url(https://static.mypaydo.shop/media/alshaya_perfumes_423/discover.png)!important;
+      background-size:100%;
+  }
+  .bakhoor_fragrance h2 {
+      margin-top: 0px;
+      margin-bottom: 20px;
+  }
+  .instagram_sec h2 {
+      font-family: 'Comfortaa', cursive;
+      color: #00194f;
+      font-size: 15px;
+  }
+  .delivery_text img {
+      width: 26px;
+  }
+  .delivery_text {
+      text-align: left;
+  }
+  .bakhoor_bg img {
+      width: 73%;
+      margin-top: 39px;
+  }
+  .mobile_view {
+      background: #ffffff;
+  }
+  .footer_new .my-col-1 {
+      display: inline-block;
+      width: 48%;
+  }
+  .footer_new .my-col-2 {
+      display: inline-block;
+      width: 48%;
+  margin-top: 16px;
+  }
+  .links h3 {
+      font-size: 12px;
+  }
+  .links li a {
+      font-size: 11px;
+      color: #fff;
+      line-height: 1;
+  }
+  .social_footer ul {
+      list-style: none;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+  padding: 0;
+  }
+  .social_footer ul li a {
+      color: #fff;
+      font-size: 18px;
+  }
+  .copyright {
+      width: 100%;
+  text-align: center;
+  margin-bottom: 15px
+  }
+  .new_fragrance {
+   background-color: #f2f7fe;
+  }
+  .image_fragrance {
+      width: 50%;
+      float: left;
+  }
+  .products_mobile{
+   padding-left: 0!Important;
+      padding-right: 0px!important;}
+  }
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal>.swiper-pagination-bullets {
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      position: unset !important;
+  }
+  col-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .footer_new {
+     margin-top:0 !important;
+        background: url(https://static.mypaydo.shop/media/grow_it_green_600/Picsart_22-03-10_15-40-43-951-0076a304-3.jpg) no-repeat center center fixed !important;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  }
+  .swiper-slide img {
+      z-index: -1;
+  }
+  [_nghost-microapps-c214] ion-slides[_ngcontent-microapps-c214] ion-slide[_ngcontent-microapps-c214] {
+      height: 100%;
+      z-index: -999999;
+  }
+  .footer_new{
+      background: #C4A484 !important;
+  }
+@media(min-width:900px){
+  .mega-box .content .row {
+    width: 33.33% !important;
+}
+.row .mega-links li {
+    padding: 0 35px !important;
+}
+}
+  .mega-box .content .row {
+    width: 100% !important;
+}
+.mega-links{
+width:100%;
+}
+.mega-links a{
+width:100% !important;
+font-size:14px !important;
+}
+@media(max-width:900px){
+.mega-box .content {
+    padding: 0 !important;
+    margin: 0;
+    padding-bottom: 20px !important;
+        padding-top: 10px !important;
+}
+.mega-box .content .row {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+.content .row .mega-links {
+    margin: 0;
+    flex:1;
+}
+.row .mega-links li {
+    padding: 0 !important;
+}
+.row .mega-links li a {
+    font-size: 10px !important;
+    font-size:12px;
+    padding: 9px 4px !important;
+}
+.row .mega-links li a:hover {
+}
+.rtl .content .row .mega-links {
+    margin-left:0 !important;
+    padding-right: 10px;
+}
+.nav-links li a {
+    font-size: 12px !important;
+    padding: 8px 5px !important;
+}
+nav .wrapper {
+    width: 100% !important;
+    height:auto !important;
+    padding:0 !important;
+}
+.wrapper .nav-links{
+padding:0 !important;
+margin:0 !important;
+}
+.nav-links li:hover .drop-menu, .nav-links li:hover .mega-box, .nav-links li:hover .mega-box .content {
+    top: 27px !important;
+}
+.row .mega-links li a {
+    padding: 0 5px !important;
+}
+.row .mega-links li a:hover {
+    border-radius: 0px !important;
+    margin: 0 !important;
+}
+.mega-box {
+    width: 80%;
+}
+}
+#background-content {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-safe-area ion-label {
+    font-size: 14px !important;
+}
+.ltr .logo {
+position:relative;
+    height: 70px;
+    right: 27px;
+}
+.rtl .logo{
+position:relative;
+    height: 70px;
+    left: 27px;
+}
+.row .mega-links li  {
+height: 35px;
+}
+.row .mega-links li a {
+height: 35px;
+line-height: 35px !important;
+    font-size: 11px !important;
+}
+@media(min-width:900px){
+.row .mega-links li a {
+    font-size: 14px !important;
+}
+
+nav .wrapper {
+    width:100% !important;
+}
+.page{
+   padding: 0 10vw !important;
+}
+}
+.footer_new {
+    background: #704127 !important;
+}
+.bottom-container a {
+    justify-content: center;
+}
+#element-4-67 {
+    padding-bottom: 40px;
+}
+.header-main-row {
+    background: #ffffff80;
+    box-shadow: 1px 1px 15px 6px white;
+}
+img.logo {
+    display: none;
+}
+ .product-container {
+    border-radius: 10px !important;
+    background: white;
+    box-shadow: 0px 0px 40px 0px white;
+}
+.slider-absolute-container {
+    z-index: 1;
+}
+@media(max-width:900px){
+.mega-box {
+    width: 80% !important;
+}
+.nav-links li a {
+    font-size: 11px !important;
+    padding: 8px 3px !important;
+    font-weight: bold !important;
+}
+}
+.page>app-dynamic-server-element {
+    background: #ffffff80;
+    box-shadow: 0px 0px 40px 0px white;
+}
+.links h3 {
+    font-family: 'Raleway' !important;
+}
+nav .wrapper {
+    background: #ffffff80;
+    box-shadow: 0px 0px 40px 0px white;
+}
+app-category-card {
+    border: 1px solid green;
+}
+app-categories-list a{
+text-decoration:none !important;
+}
+.page {
+}
+app-categories-list,#categories-page-container ion-label {
+    background: #ffffff80;
+    padding: 10px;
+}
+div#category-products-list-page-container app-sub-category-list,app-breadcrumbs,app-products-list{
+background: #ffffff80;
+}

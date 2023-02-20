@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+ *{
+  font-family: 'Poppins', sans-serif !important;
+  }
+
+#support-page-container.page {
+padding: 0 20px !important;
+}
+
+.ltr .product-price{
+  text-align:center !important;
+}
+.rtl .product-price{
+  text-align:center !important;
+}
+.product-price {
+   text-align-last: center !important;
+}
+
+.product-brand-name {
+    align-self: center !important;
+    font-family: 'Poppins', sans-serif !important;
+
+
+}
+
+.product-container{
+  border:0.5px solid black !important;
+  border-radius: 20px!important;
+  box-shadow: 0px 4px 8px 0 rgb(0 0 0 / 10%);
+  font-family: 'Poppins', sans-serif !important;
+
+
+}
+ .checkout-container{
+    border-top: 1px solid rgba(var(--ion-color-medium-rgb),.3);
+    background-color: white;
+}
+
+
+.category-container{
+border:0.5px solid black !important;
+border-radius: 20px!important;
+  box-shadow: 0px 4px 8px 0 rgb(0 0 0 / 10%);
+  font-family: 'Poppins', sans-serif !important;
+
+}
+
+.review-order-footer-container {
+    background: white !important;
+}
+
+.product-name{
+ text-align-last: center !important;
+ font-family: 'Poppins', sans-serif !important;
+
+}
+
+.product-price {
+   text-align-last: center !important;
+   text-align: center !important;
+}
+
+ion-label.product-name.text-body-2 {
+   text-align: center !important;
+}
+
+.product-container .bottom-container div:last-child {
+    place-content: center !important;
+    /* align-items: center !important; */
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+
+
+
+
+#dynamic-element-1-3{
+  padding:0 100px;
+}
+
+ion-grid {
+    padding: 0 200px;
+}
+
+
+@media(max-width:800px){
+
+
+#dynamic-element-1-3{
+  padding:0 20px;
+}
+
+ion-grid {
+    padding: 0 20px;
+}
+
+
+.satisfaction_section h3 {
+
+    margin-top: 50px !important;
+}
+
+}
+
+
+
+.page{
+padding: 0 0px !important;
+
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin: 0 0 17.5px;
+    font-family: 'Poppins', sans-serif !important;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+h3, .h3 {
+    font-size: 1.33333em;
+    text-transform: uppercase;
+        font-weight: 800 !important;
+
+    letter-spacing: normal;
+}
+
+h3 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.menu-label {
+    margin-top: 2px;
+    height: 1em;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+img {
+border-radius: 20px !important;
+border: 0.5px black solid !important;
+}
+
+.pay_logo img {
+    border: none !important;
+}
+
+.swiper-slide img {
+
+    border: none !important;
+}
+
+
+.slider-container{
+
+    border: none !important;
+}
+
+
+
+
+hr {
+    height: 0px !important;
+    box-sizing: content-box;
+    width: 70% !important;
+    border: 0.5px solid #8080803d !important;
+}
+
+
+.text-body-2 {
+    font-size: 15px !important;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+.sc-ion-label-md-s h2 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+ion-label.product-name.text-body-2 {
+    text-align: center !important;
+    font-size: 13px !important;
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+b, strong {
+    font-weight: bold;
+    letter-spacing: normal;
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app-product-view .collapsible {
+  border-top: 1px solid #ddd!important;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-weight: bolder;
+  font-size: larger;
+  margin-bottom: 10px;
+  letter-spacing: 1px!important;
+}
+[lang="ar"] app-product-view .collapsible {
+  text-align: right;
+}
+app-product-view .normal{font-weight:normal;}
+app-product-view b{
+  color: #9c6e71;
+}
+
+/* (A) TABS CONTAINER */
+app-product-view .tab {
+  position: relative;
+  max-width: 600px;
+}
+
+/* (B) HIDE CHECKBOX */
+app-product-view .tab input { display: none; }
+
+/* (C) TAB LABEL */
+app-product-view .tab label {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  background: #000000;
+  cursor: pointer;
+}
+
+/* (D) TAB CONTENT */
+app-product-view .tab .tab-content {
+  background: #f7f7f7;
+  /* CSS ANIMATION WILL NOT WORK WITH AUTO HEIGHT */
+  /* THIS IS WHY WE USE MAX-HEIGHT INSTEAD */
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+app-product-view .tab .tab-content p { padding: 10px; }
+
+/* (E) OPEN TAB ON CHECKED */
+app-product-view .tab input:checked ~ .tab-content { max-height: 100%; }
+
+/* (F) EXTRA - ADD ARROW INDICATOR */
+app-product-view .tab label::after {
+  content: "\25B6 \FE0E";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  transition: all 0.4s;
+}
+app-product-view .tab input:checked ~ label::after { transform: rotate(90deg); }
+[lang="ar"] app-product-view .tab label::after{
+  right:auto;
+  left:10px;
+}
+app-search.ng-tns-c294-1.ng-tns-c293-17.search-appearance-bar.ng-star-inserted {
+    display: none !important;
+}
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+.list-grid-container ion-row {
+    justify-content: center !important;
+}
+
+
+@media(max-width:900px) {
+            app-product-view app-external-html-container img {
+                width: 100% !important;
+            }
+            .signup-newsletter-form {
+    max-width: 220px !important;
+}
+.col.col_email {
+    width: 50% !important;
+}
+.footer input {
+    border: none !important;
+    background: transparent;
+    width: 100%;
+}
+*{
+    font-family: 'Poppins', sans-serif !important;
+
+}
+.satisfaction_section_text {
+    font-family: 'Poppins', sans-serif !important;
+}
+        }
+
+
+
+        .main-slide1 {
+    width: 100%;
+    height: auto;
+    min-height: 375px !important;
+
+}
+p.mt__20.delivery_logo {
+    display: none;
+}
+#checkout-page-container ion-card:nth-of-type(2){
+
+display: none !important;
+}
+#checkout-page-container ion-card:nth-of-type(3){
+
+display: none !important;
+}
+
+#checkout-page-container div:nth-of-type(2) div:nth-of-type(1){
+    place-content: stretch !important;
+}
+
+#checkout-page-container div:nth-of-type(2) div:nth-of-type(1) ion-label{
+   width:50%;
+}
+#checkout-page-container div:nth-of-type(2) div:nth-of-type(1) ion-label:nth-of-type(2){
+  text-align:right;
+}
+
+app-select-boxes ion-grid ion-row ion-col{
+
+    flex: 0 0 calc(calc(6 / var(--ion-grid-columns, 12)) * 100%) !important;
+    width: calc(calc(6 / var(--ion-grid-columns, 12)) * 100%) !important;
+    max-width: calc(calc(6 / var(--ion-grid-columns, 12)) * 100%) !important;
+}

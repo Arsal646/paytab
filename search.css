@@ -1,0 +1,214 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif !important;
+        }
+
+        .main_section {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        @media(min-width:900px) {
+            .main_section {
+                width: 1270px;
+                margin: 0 auto;
+
+            }
+        }
+
+
+        .product_section {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .product_col {
+            width: 33.33%;
+            height: 600px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .product_common {
+            width: 100%;
+            height: 269px;
+            margin-bottom: 20px;
+        }
+
+        .child {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: all .5s;
+            z-index: 1;
+            color: white;
+        }
+
+        .child {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .bg-one {
+            background-image: url(https://static.mypaydo.shop/media/ioud_store_ksa_222/2-edbd4379-8.jpg);
+        }
+
+        .bg-two {
+            background-image: url(https://static.mypaydo.shop/media/ioud_store_ksa_222/3-828f2510-e.jpg);
+        }
+
+        .bg-three {
+            background-image: url(https://static.mypaydo.shop/media/ioud_store_ksa_222/1-6b2a75af-c.jpg);
+        }
+
+        .product_section2_bg {
+            background-image: url(https://static.mypaydo.shop/media/ioud_store_ksa_222/11-2f82366b-3.jpg);
+        }
+
+        .product_section3_bg {
+            background-image: url(https://static.mypaydo.shop/media/ioud_store_ksa_222/22-891326c1-1.jpg);
+        }
+
+        .product_section4_bg {
+            background-image: url(https://static.mypaydo.shop/media/ioud_store_ksa_222/33-779f6874-d.jpg);
+        }
+
+        .product_col:hover .child,
+        .product_col:focus .child {
+            transform: scale(1.1);
+        }
+
+        .content {
+            color: white;
+            position: relative;
+            top: -70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .content p {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .content .icon {
+            background-color: white;
+            color: black;
+            padding: 15px;
+            border-radius: 50px;
+            display: flex;
+            transition: all 0.5s;
+        }
+
+        .content .icon:hover {
+            background-color: #733000;
+            color: white;
+        }
+
+        .product_col:hover .icon {
+            background-color: #733000;
+            color: white;
+        }
+
+        .product_col a {
+            display: flex;
+            color: inherit;
+        }
+
+        @media screen and (max-width: 960px) {
+            .product_col {
+                width: 100%;
+            }
+
+            .product_col {
+                height: 153px
+            }
+
+            .content p {
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .content .icon {
+                padding: 2px;
+            }
+
+            .content {
+                top: -40px;
+                padding: 0 3px;
+            }
+
+            .content ion-icon {
+                font-size: 0 10px;
+            }
+
+            .product_section,
+            .product_main_section {
+                padding: 0 10px;
+            }
+
+            .product_common {
+                height: 82px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+        .my-background-class {
+            background-image: url('https://static.mypaydo.shop/media/ioud_store_ksa_222/search%20bg-8a455898-1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        input.elementor-search-form__input {
+            color: black;
+            width: 60%;
+            padding: 10px 0;
+            outline: none;
+            border:none;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 14px;
+
+        }
+        .elementor-search-form__container{
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .elementor-search-form__icon {
+            font-size: 20px;
+            color: black;
+            height: 100%;
+            display: flex;
+        }
+        .elementor-search-form__container {
+            width: 60%;
+            margin: 0 auto;
+        }
+

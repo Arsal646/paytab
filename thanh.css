@@ -1,0 +1,295 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica", Sans-serif;
+}
+body{
+    background: url(https://thannahcoffee.com/wp-content/uploads/2021/12/BG-1-min.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.hero-section{
+    padding: 0;
+    margin: 0;
+    background: url(https://static.mypaydo.shop/media/thannh_906/Frame-29-min-a10f8406-b.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.hero-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 30px;
+}
+.hero-content p{
+    color: #E9BB9B;
+    font-family: "Helvetica", Sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+.hero-content{
+    max-width: 1260px;
+}
+.fadeInDown {
+    opacity: 0;
+	animation: fadeIn 1s ease-in both;
+}
+.zoom-out {
+    animation: zoom-out 1s ease-out ;
+  }
+  @keyframes zoom-out {
+    0% {
+      transform: scale(0.5, 0.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+.spin {
+    animation:spin 2s linear ;
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+.left-img{
+    position: absolute;
+    left: 53px;
+    top: 130px;
+}
+.right-img{
+    position: absolute;
+    right: 53px;
+    top: 130px;
+}
+.rotateInDownLeft{
+    animation:rotateInDownLeft 1s linear
+}
+
+@keyframes rotateInDownLeft{
+    from{
+        transform-origin:left bottom;
+        transform:rotate3d(0,0,1,-45deg);
+        opacity:0
+    }
+    to{
+        transform-origin:left bottom;
+        transform:none;
+        opacity:1
+    }
+}
+.rotateInDownLeft{
+    animation:rotateInDownLeft 1s linear
+}
+@keyframes rotateInDownLeft{
+    from{
+        transform-origin:left bottom;
+        transform:rotate3d(0,0,1,-45deg);
+        opacity:0
+    }
+    to{
+        transform-origin:left bottom;
+        transform:none;
+        opacity:1
+    }
+}
+@keyframes rotateIn{
+    from{
+        transform-origin:center;
+        transform:rotate3d(0,0,1,-200deg);
+        opacity:0
+    }
+    to{
+        transform-origin:center;
+        transform:none;
+        opacity:1
+    }
+}
+.rotateIn{
+    animation:rotateIn 1s linear
+}
+.hero-content img{
+    width: 50%;
+}
+.product-heading{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 15px;
+}
+.product-heading p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+}
+.product-heading h2{
+    font-size: 24px;
+}
+.section3{
+    background: url(https://thannahcoffee.com/wp-content/uploads/2021/12/Group-325-min.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+}
+.section3-content{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+    min-height: 1000px;
+    max-width: 1260px;
+
+}
+.section3 img{
+    width: 50%;
+    margin: 0 auto;
+}
+.section3 p{
+    text-align: center;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+.section4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+.section4-content{
+    max-width: 1260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.section4-content h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.section4-content p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.section4-col {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.section4-col img{
+    width: 60%;
+    margin: 0 auto;
+}
+.discover-btn a{
+    font-family: "Roboto", Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #E8B48F 0%, #54264A 100%);
+    border-radius: 25px 25px 25px 25px;
+    padding: 15px 30px 15px 30px;
+    color: white;
+    text-decoration: none;
+}
+.discover-btn a:hover{
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #A45248 0%, #5E2154 100%);
+}
+.discover-btn{
+    margin: 50px 0;
+}
+
+
+@media(max-width:900px){
+    .hero-content{
+        padding: 10px;
+        align-items: flex-end;
+    }
+    .hero-content p{
+        text-align: end;
+        padding: 0% 0% 0% 40%;
+    }
+    .left-img,.right-img{
+        display: none;
+    }
+    .hero-section{
+        background-image: url(https://thannahcoffee.com/wp-content/uploads/2022/02/Group-358-min.jpg);
+        background-position: bottom left;
+        background-size: cover;
+        min-height: 60vh;
+    }
+    .hero-content p{
+        font-size: 18px;
+    }
+    .hero-content .hero-icon-img img{
+        display:none ;
+    }
+    .section3{
+        padding: 10px;
+        background-size: cover;
+        padding: 50px 0px 50px 0px;
+    }
+    .section3-content img{
+        width: 90%;
+    }
+    .section3-content{
+        min-height: 1px;
+    }
+    .section4-col{
+        width: 100%;
+    }
+    .section4-content{
+        flex-direction: column;
+        padding: 15px;
+    }
+    .hide{
+        display: none;
+    }
+    .section4-col img {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .section4{
+        padding: 100px 0px 100px 0px;
+    }
+}
+
+
+

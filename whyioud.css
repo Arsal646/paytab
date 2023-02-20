@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif !important;
+}
+.why-banner{
+    background: url(https://static.mypaydo.shop/media/ioud_store_ksa_222/search%20bg-8a455898-1.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: 200px;
+}
+.why-banner h2{
+    font-size: 36px;
+}
+.why-second-row{
+    display: flex;
+    max-width: 1270px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: 30px auto;
+}
+.why_col1{
+    width: 33.33%
+
+}
+.why_col2{
+    width: 66.66%
+}
+.why_col h2{
+    margin: 0;
+}
+.why_col1 h2{
+    font-family: "Montserrat", Sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+}
+.why-service{
+    display: flex;
+    max-width: 1270px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: 70px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.service{
+    background: #E1EAF2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+    gap: 20px;
+}
+.service p {
+    width: 160px;
+    text-align: center;
+}
+.why_col2 p{
+    line-height: 28px;
+}
+@media(max-width:900px){
+    .why-second-row {
+        width: 100%;
+        flex-direction: column;
+    }
+    .why_col1,.why_col2{
+        width: 100%;
+    }.why-service {
+        justify-content: center;
+    }
+    .why_col2 p{
+        padding-top: 20px;
+    }
+    .why_col1 h2 {
+        font-size: 32px;
+    }
+}

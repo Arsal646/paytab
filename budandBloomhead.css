@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;800&display=swap');
+
+
+.organic_men {
+    margin-top: 10px;
+}
+
+.footer_new {
+    margin-top: 50px;
+}
+
+.menu_ar ul {
+    direction: initial;
+}
+
+.separator {
+    padding-top: 30px;
+}
+
+.search_ar {
+
+    direction: initial;
+}
+
+.separator h2 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: #2a4800;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid #74c600;
+    border-top: 1.5px solid #74c600;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.slider-absolute-container {
+    border: 1px solid #73c601;
+}
+
+.ar_direction {
+    direction: initial;
+}
+
+.bottom-container {
+    background: #fffffffa;
+    margin-top: -8px;
+    box-shadow: -1px 1px 2px #00000047;
+}
+
+.bottom-container ion-label {
+    text-align: center !important;
+    font-family: 'Raleway', sans-serif;
+}
+
+.bottom-container app-add-to-cart-button {
+    align-self: center !important;
+}
+
+.bottom-container div {
+    place-content: center !important;
+}
+
+.organic_logo {
+    margin-top: 15px;
+}
+
+
+.logo img {
+    margin-left: 5px;
+
+}
+
+.main-banner img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0px;
+    padding-left: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-left: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.menu ul li a {
+    color: #41663e;
+}
+
+.menu {
+    border-top: 1px solid #74c600;
+    border-bottom: 1px solid #74c600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.menu ul li:first-child {
+    margin-left: 0px;
+    padding: 0px;
+}
+
+li.menu_icon {
+    color: #41663e;
+}
+
+.organic_men img {
+    width: 127px;
+    float: right;
+}
+
+.delivery-banner {
+    margin-top: 15px;
+}
+
+.gardening {
+    margin-top: 30px;
+}
+
+.gardening {
+    margin-top: 30px;
+    box-shadow: 0px 3px 5px #0000003d;
+}
+
+.gardening img {
+    width: 100%;
+
+}
+
+.organic_logo img {
+    width: 108px;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-top: 45px;
+    direction: initial;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 2px solid #98cb21;
+    border-right: none;
+    padding: 5px;
+    height: 50px;
+    border-radius: 0;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus {
+    color: #00B4CC;
+}
+
+.searchButton {
+    width: 76px;
+    height: 50px;
+    border: 1px solid #41663e;
+    background: #41663e;
+    text-align: center;
+    color: #fff;
+    /* border-radius: 0 5px 5px 0; */
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+    width: 100%;
+
+}
+
+.menu_ar ul li:first-child {
+    margin-left: 25px;
+}
+
+button.searchButton:after {
+    height: 30px;
+    background-image: url(https://static.mypaydo.shop/media/grow_it_green_600/icon-01.png);
+    width: 28px;
+    content: '';
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+}
+
+.menu ul li a:hover {
+    color: #ed3279;
+    text-decoration: none;
+}
+
+.gardening img:hover {
+    box-shadow: 0px 0px 9px #0000007a;
+    zoom: 1;
+}
+
+.social-banner {
+    background-image: url(https://static.mypaydo.shop/media/grow_it_green_600/social_bg1.png);
+    margin-top: 30px;
+    padding: 14px 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align-last: center;
+}
+
+.social-banner ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.partner_banner {
+    margin-top: 28px;
+    padding: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    .organic_logo {
+        margin-top: 15px;
+        text-align-last: end;
+    }
+
+    .social-banner {
+        background-image: url(https://static.mypaydo.shop/media/grow_it_green_600/social_bg1.png);
+        margin-top: 30px;
+        padding: 14px 0px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align-last: center;
+    }
+}
+
+.header-icon {
+    color: #41663e;
+}
+
+.menu ul li a {
+    color: #41663e;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav {
+
+    z-index: 99;
+    width: 100%;
+
+
+}
+
+nav .wrapper {
+    position: relative;
+    max-width: 1300px;
+    padding: 0px 30px;
+    height: 70px;
+    line-height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid #41663e;
+    border-bottom: 1px solid #41663e;
+    width: 90%;
+
+}
+
+.wrapper .logo a {
+    color: #f2f2f2;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.wrapper .nav-links {
+    display: inline-flex;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #41663e;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 2px;
+}
+
+.nav-links li a:hover {
+    background: #41663e;
+    color: white;
+}
+
+.nav-links .mobile-item {
+    display: none;
+}
+
+.nav-links .drop-menu {
+    position: absolute;
+    background: #242526;
+    width: 180px;
+    line-height: 45px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box,
+.nav-links li:hover .mega-box .content
+{
+    transition: all 0.3s ease;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+.nav-links li:hover .swiper-wrapper {
+    z-index: -1 !important;
+}
+.nav-links li:hover .arrow-button-slider{
+    z-index: -1 !important;
+    }
+
+    .nav-links li:hover  div#category-products-list-page-container div {
+        z-index: -1;
+        position: relative;
+    }
+    .nav-links li:hover .arrow-button-slider{
+  z-index: -1 !important;
+  }
+    .nav-links li:hover  app-breadcrumbs{
+        z-index: -1;
+    }
+
+.drop-menu li a {
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+}
+
+.mega-box {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mega-box .content {
+    background: #41663e;
+    padding: 25px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mega-box .content .row {
+    width: calc(25% - 30px);
+    line-height: 45px;
+}
+
+.content .row img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.content .row header {
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content .row .mega-links {
+    margin-left: -40px;
+    border-left: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.row .mega-links li {
+    padding: 0 20px;
+}
+
+.row .mega-links li a {
+    padding: 0px;
+    padding: 0 10px;
+    color: #d9d9d9;
+    font-size: 15px;
+    display: block;
+    width: 200px;
+    margin: 2px;
+
+}
+
+.row .mega-links li a:hover {
+    color: #41663e;
+    background: white;
+
+}
+
+.wrapper .btn {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.wrapper .btn.close-btn {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+
+.menu_img {
+    height: 100px;
+    width: 200px;
+}
+
+@media screen and (max-width: 970px) {
+    .logo img {
+        width: 100% !important;
+        height: auto;
+    }
+    nav .wrapper {
+
+        padding: 50px 0;
+            height: 140px;
+    }
+
+    .nav-links li:hover .drop-menu, .nav-links li:hover .mega-box {
+        transition: all 0.3s ease;
+
+        opacity: 1;
+        visibility: visible;
+        z-index: 999;
+    }
+
+
+    .wrapper .btn {
+        display: block;
+    }
+
+    .wrapper .nav-links {
+
+        flex-wrap: wrap;
+
+        width: 100%;
+        max-width: 100%;
+        top: 0;
+
+
+        display: flex;
+        padding: 50px 10px;
+        line-height: 50px;
+        overflow-y: auto;
+        padding: 20px 0;
+        margin: 20px 0;
+        transition: all 0.3s ease;
+    }
+
+
+
+    .mega-box .content {
+        background: #41663e;
+        padding: 25px 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+z-index: 9999 !important;
+        justify-content: space-between;
+        box-shadow: 0 6px 10px rgb(0 0 0 / 15%);
+        height: auto;
+    }
+
+    .nav-links .mobile-item:hover {
+        background: #3A3B3C;
+    }
+    .mega-box {
+            padding: 0 !important;
+    width: 70%;
+--webkit-transform: translate3d(0,0,1px);
+    transform: translate3d(0,0,1px);
+    --webkit-overflow-scrolling: auto !important;
+    Overflow: visible;
+    z-index: 2;
+     }
+
+
+
+
+}
+
+nav input {
+    display: none;
+}
+.container{
+    padding: 0 !important;
+    display: flex;
+}
+.main_row{
+    display: flex;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-wrap: wrap;
+    min-width: 100%;
+    flex: 1;
+}
+.col{
+    width: 24%;
+}
+ .logo {
+    width: 100% !important;
+}
+.logo img{
+    width: 100%;
+}
+.organic_logo{
+    text-align: center;
+}
+
+@media(max-width:900px){
+    .col{
+        width: 49%;
+    }
+    .organic_logo img {
+        width: 70px;
+    }
+    .organic_logo{
+        text-align: end;
+    }
+}

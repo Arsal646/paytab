@@ -1,0 +1,281 @@
+.footer-container {
+    background: #fff !important;
+}
+
+.footer-checkout-button.ion-color .text-paragraph {
+    color: #ffffff!important;
+}
+
+.product-container {
+    border: none !important;
+}
+
+.category-container {
+    border: none !important;
+}
+.rtl .tracking-page-card ion-card-title {
+  text-align:right;
+}
+.text-body-2{
+font-weight: normal !important;
+font-size:10px !important;
+}
+.product-container{
+padding:0 !important;
+}
+.product-name{
+font-size:10px !important;
+
+}
+.text-body-2{
+font-size:10px !important;
+
+}
+.product-container .product-name{
+font-size: 10px !important;
+text-align: center !important;
+  margin-bottom:-15px !important;
+
+}
+
+.bottom-container div:nth-child(){
+margin-bottom:-10px !important;
+}
+
+
+.header-safe-area {
+    --background: white !important;
+}
+
+element.style {
+}
+constructed stylesheet
+.toolbar-container {
+    padding-left: unset;
+    padding-right: unset;
+    padding-inline-start: var(--padding-start);
+    padding-inline-end: var(--padding-end);
+}
+constructed stylesheet
+.toolbar-container {
+    padding-left: var(--padding-start);
+    padding-right: var(--padding-end);
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: var(--min-height);
+    contain: content;
+    overflow: hidden;
+    z-index: 10;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+@media screen and (min-width: 960px)
+<style>
+[_nghost-microapps-c287] ion-toolbar[_ngcontent-microapps-c287] {
+    --min-height: 76px;
+}
+<style>
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0 0 0.55px;
+}
+.header-safe-area {
+    --background: transparent;
+}
+<style>
+.hydrated {
+    visibility: inherit;
+}
+<style>
+.hydrated {
+    visibility: inherit;
+}
+.header-safe-area {
+    --background: white !important;
+}
+<style>
+ion-menu-button, ion-menu, ion-menu-toggle, ion-fab-button, ion-fab, ion-fab-list, ion-refresher-content, ion-refresher, ion-back-button, ion-toast, ion-card, ion-card-content, ion-card-header, ion-card-subtitle, ion-card-title, ion-item-option, ion-item-options, ion-item-sliding, ion-accordion, ion-accordion-group, ion-infinite-scroll-content, ion-infinite-scroll, ion-reorder, ion-reorder-group, ion-segment-button, ion-segment, ion-tab-button, ion-tab-bar, ion-chip, ion-searchbar, ion-nav, ion-nav-link, ion-slide, ion-slides, ion-input, ion-textarea, ion-backdrop, ion-loading, ion-breadcrumb, ion-breadcrumbs, ion-modal, ion-route, ion-route-redirect, ion-router, ion-router-link, ion-avatar, ion-badge, ion-thumbnail, ion-col, ion-grid, ion-row, ion-img, ion-progress-bar, ion-range, ion-split-pane, ion-text, ion-toggle, ion-virtual-scroll, ion-picker-column-internal, ion-picker-internal, ion-radio, ion-radio-group, ion-ripple-effect, ion-button, ion-icon, ion-datetime, ion-picker, ion-picker-column, ion-action-sheet, ion-alert, ion-popover, ion-checkbox, ion-select, ion-select-option, ion-select-popover, ion-app, ion-content, ion-footer, ion-header, ion-router-outlet, ion-title, ion-toolbar, ion-buttons, ion-spinner, ion-item-divider, ion-item-group, ion-skeleton-text, ion-list, ion-list-header, ion-item, ion-label, ion-note {
+    visibility: hidden;
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+constructed stylesheet
+:host {
+    --background: var(--ion-toolbar-background, var(--ion-color-step-50, #f7f7f7));
+    --color: var(--ion-toolbar-color, var(--ion-text-color, #000));
+    --border-color: var(--ion-toolbar-border-color, var(--ion-border-color, var(--ion-color-step-150, rgba(0, 0, 0, 0.2))));
+    --padding-top: 3px;
+    --padding-bottom: 3px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --min-height: 44px;
+}
+constructed stylesheet
+:host {
+    --border-width: 0;
+    --border-style: solid;
+    --opacity: 1;
+    --opacity-scale: 1;
+    -webkit-font-smoothing: antialiased;
+    padding-left: var(--ion-safe-area-left);
+    padding-right: var(--ion-safe-area-right);
+    display: block;
+    position: relative;
+    width: 100%;
+    color: var(--color);
+    font-family: var(--ion-font-family, inherit);
+    contain: content;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+[_nghost-microapps-c279] {
+    width: 100vw;
+    background: white !important;
+    color: white;
+}
+
+
+
+
+
+
+app-product-view .collapsible {
+  border-top: 1px solid #ddd!important;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-weight: bolder;
+  font-size: larger;
+  margin-bottom: 10px;
+  letter-spacing: 1px!important;
+}
+[lang="ar"] app-product-view .collapsible {
+  text-align: right;
+}
+app-product-view .normal{font-weight:normal;}
+app-product-view b{
+  color: #9c6e71;
+}
+
+
+
+
+/* (A) TABS CONTAINER */
+app-product-view .tab {
+  position: relative;
+}
+
+/* (B) HIDE CHECKBOX */
+app-product-view .tab input { display: none; }
+
+/* (C) TAB LABEL */
+app-product-view .tab label {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  background: #000000;
+  cursor: pointer;
+}
+
+/* (D) TAB CONTENT */
+app-product-view .tab .tab-content {
+  background: #f7f7f785;
+  /* CSS ANIMATION WILL NOT WORK WITH AUTO HEIGHT */
+  /* THIS IS WHY WE USE MAX-HEIGHT INSTEAD */
+  overflow: hidden;
+  max-height: 0;
+}
+app-product-view .tab .tab-content p { padding: 10px; }
+
+/* (E) OPEN TAB ON CHECKED */
+app-product-view .tab input:checked ~ .tab-content { max-height: 100%; }
+
+/* (F) EXTRA - ADD ARROW INDICATOR */
+app-product-view .tab label::after {
+  content: "+";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  transition: all 0.4s;
+  font-size:24px;
+}
+app-product-view .tab input:checked ~ label::after {
+  content: "-";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  transition: all 0.4s;
+  font-size:24px;
+ }
+[lang="ar"] app-product-view .tab label::after{
+  right:auto;
+  left:10px;
+}
+app-product-view .tab label {
+    color: black;
+    background: none;
+    border-bottom: 1px solid #dddddd !important;
+    color: #1c1b1b;
+    padding: 20px 0;
+}
+app-full-width-category ion-label {
+    display: none;
+}
+
+
+.carousel-title {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 50px;
+    letter-spacing: 3px;
+}
+app-login-button .logo-container img{
+display:none;
+
+}
+app-login-button .logo-container{
+    content: " ";
+    min-width: 40px;
+    background: url(https://static.moh-mypaydo.com/media/fnbyfn/fn-emblem-01-669676c9-9-216874e3-1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+@media(min-width:900px){
+.carousel-title {
+    margin-top: 100px;
+}
+}
+@media(max-width:900px){
+.logo-container #logo {
+    height: 3em !important;
+    width: unset;
+}
+}

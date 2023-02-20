@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation</title>
+    <style>
+        * {
+            font-family: "Times New Roman", serif !important;
+            text-align: justify;
+        }
+
+        @page {
+            size: {
+                    {
+                    pagesize|default: "A4"
+                }
+            }
+
+            ;
+            margin: 1.5in 0.3in 1in 0.3in;
+
+            @bottom-left {
+                content: element(footer);
+            }
+
+            @top-left {
+                content: element(header);
+            }
+
+        }
+
+        #pageFooter:after {
+            counter-increment: page;
+            content: counter(page);
+            margin: 100px;
+        }
+
+        footer {
+            position: running(footer);
+            width: 70% !important;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 50px !important;
+        }
+
+        header {
+            position: fixed;
+            position: running(header);
+
+            left: 0.5in;
+            width: 19.5cm;
+        }
+
+        table {
+            width: 100% !important;
+        }
+
+        table u {
+            text-decoration: none !important;
+            border-bottom: 1px solid black;
+        }
+
+        .general_term u {
+            font-size: 16px !important;
+            text-decoration: none !important;
+            border-bottom: 1px solid black !important;
+            font-weight: bold;
+        }
+
+        .general_term blockquote {
+            font-size: 16px !important;
+            margin-right: -1.8pt;
+            text-align: justify;
+        }
+
+        .general_term p {
+            font-size: 16px !important;
+            margin-right: -1.8pt;
+            text-align: justify;
+        }
+
+        .general_term li {
+            font-size: 16px !important;
+            margin-right: -1.8pt;
+            text-align: justify;
+        }
+
+        .common_font_size {
+            font-size: 16px !important;
+            margin-right: -1.8pt;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        <div class="head_section" style="display: flex; justify-content: space-between;align-items: center;">
+            <img style="width: 200px;" src="file://{{ icon }}" alt="image not found">
+            <p
+            >
+                <span >Ref:
+                    {{quotation.reference}}</span>
+        </div>
+        </p>
+    </header> -->
+
+    <!-- <footer id="pageFooter" style="margin:50px 0;text-align: center;margin: 20px auto;">
+        <p style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;text-align:center; margin-top: 50px;'>
+            <span style="font-size:13px;">{{configuration.company_name}},&ndash;U.A.E Tel: +
+                {{configuration.company_mobile_number}} Fax: {{configuration.company_fax_number}}</span><a
+                href="mailto:info@avluae.com"><span
+                    style="font-size:13px;text-decoration: none;">{{configuration.company_email}}</span></a><span
+                style="color:blue;"><span style="font-size:13px;">,
+                    {{configuration.company_secondary_email}}</span></span><span
+                style="font-size:13px;">{{configuration.company_website}}</span>
+        </p>
+    </footer> -->
+
+    <p ><span
+            >Date  :  {{quotation.quotation_date |
+            date:"Y/m/d"}}</span></p>
+    <p>
+        <span >Ref  :
+            {{quotation.reference}}</span>
+    </p>
+    <p ><span
+            ></span></p>
+    <p ><span >M/s.
+            {{quotation.customer.name}}</span></p>
+    <p ><span >{{
+            quotation.customer.addresses.last.address }}
+            .</span></p>
+    <p ><span >Tel:
+            {{quotation.customer.contact_no}}      Fax:
+            {{quotation.customer.fax_no}}</span></p>
+    <p ><span
+            ></span></p>
+    <p ><span >Attn: Mr.
+            {{quotation.contact.name}} (Mob: {{quotation.contact.contact_no}} / E-mail: </span><span
+            >{{quotation.contact.email}})</span></p>
+    <p>
+        <span ></span>
+    </p>
+    <p>
+        <span >Dear Sir,</span>
+    </p>
+    <p>
+        <span ></span>
+    </p>
+    <p >
+        <span >{{quotation.greeting_message | safe}}</span>
+    </p>
+    <p >
+        <span ></span>
+    </p>
+    <table style="width:462.2pt;border-collapse:collapse;border:none;" border="1">
+        <tbody>
+            <tr>
+                <td >
+                    <p
+                        >
+                        {{quotation.vehicle_details}}. </p>
+                </td>
+                <td >
+                    <p >:</p>
+                </td>
+                <td >
+                    <p >
+                        {{quotation.vehicle_price}} </p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        Less: Special Discount</p>
+                </td>
+                <td >
+                    <p >:</p>
+                </td>
+                <td >
+                    <p >Dhs.
+                         {{quotation.discount}} </p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        <strong>Total Price</strong>
+                    </p>
+                </td>
+                <td >
+                    <p >
+                        <strong>:</strong>
+                    </p>
+                </td>
+                <td >
+                    <p >
+                        <strong> {{quotation.total_price}} </strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        Delivery</p>
+                </td>
+                <td >
+                    <p
+                        >
+                        :</p>
+                </td>
+                <td >
+
+                    {% for delivery_policy in quotation.delivery_policy %}
+                    <p
+                        >
+                        {{delivery_policy}} </p>
+
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        Terms of Payment</p>
+                </td>
+                <td >
+                    <p
+                        >
+                        :</p>
+                </td>
+                <td >
+                    {% for payment_terms in quotation.terms_of_payments %}
+                    <p
+                        >
+                        {{payment_terms}} </p>
+
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        Offer Validity</p>
+                </td>
+                <td >
+                    <p
+                        >
+                        :</p>
+                </td>
+                <td >
+                    <p
+                        >
+                        {{quotation.offer_validity}} .</p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+                <td >
+                    <p
+                        >
+                        </p>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <p
+                        >
+                        Security Deposit</p>
+                </td>
+                <td >
+                    <p
+                        >
+                        :</p>
+                </td>
+                <td >
+                    <p
+                        >
+                        {{quotation.security_deposit}} .</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p >
+        <span ></span>
+    </p>
+    <p>
+        <span >Please note the following:</span>
+    </p>
+    <p>
+        <span ></span>
+    </p>
+    <div class="primary_term common_font_size">
+        {% for primary_terms in quotation.primary_terms_and_conditions %}
+        {{primary_terms | safe}}
+
+        {% endfor %}
+    </div>
+
+    <p
+        >
+        <span ></span>
+    </p>
+    <p>
+        <span >Our simplified terms and conditions are attached. We trust the above meets
+            with your approval and should you have any further queries, please do not hesitate to contact us.</span>
+    </p>
+    <p>
+        <span ></span>
+    </p>
+    <p>
+        <span >Thanking you and assuring you of our best services at all times.</span>
+    </p>
+
+    </p>
+    </p>
+    <br>
+    <br>
+    <p><u
+            ><span >Our
+                Terms and Conditions for Leasing</span></u></p>
+    <br>
+
+    <div class="general_term">
+        {% for general_terms in quotation.general_terms_and_conditions %}
+        <p
+            >
+            <span > {{general_terms | safe}} </span>
+
+        </p>
+
+        {% endfor %}
+
+    </div>
+
+    <p
+        >
+        <span ></span>
+    </p>
+    <p
+        >
+        <span >Please Note: Please ensure that your drivers and company comply
+            with the current regulations of the Food Control Section of the Dubai Municipality/RTA.</span>
+    </p>
+    <p
+        >
+        <span ></span>
+    </p>
+    <p
+        >
+        <span >Any fines or penalties for non-compliance with the Food Control Section of the
+            Dubai Municipality/RTA will be the sole responsibility of your company.</span>
+    </p>
+    <p>
+        <span >……………………………………………………………………………………………………</span>
+    </p>
+    <p>
+        <span ></span>
+    </p>
+    <p>
+        <span >I confirm that I have read and accepted the above mentioned terms and
+            conditions.</span>
+    </p>
+    <p>
+        <span ></span>
+    </p>
+    <table style="border-collapse:collapse;border:none;width: 100%;">
+        <tbody>
+            <tr>
+                <td >
+                    <p
+                    >
+                        <span >M/s {{quotation.customer.name}}</span>
+                    </p>
+                </td>
+                <td
+                    >
+                    <p
+                    >
+                        <span >M/s {{configuration.company_name}}</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td
+                    >
+                    <p
+                    >
+                        <span >Name: {{quotation.contact.name}} </span>
+                    </p>
+                </td>
+                <td
+                    >
+                    <p
+                    >
+                        <span >Name: {{configuration.quotation_signature_authority_name}}</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td
+                    >
+                    <p
+                    >
+                        <span ></span>
+                    </p>
+                </td>
+                <td
+                    >
+                    <p
+                    >
+
+                </td>
+            </tr>
+            <tr>
+                <td
+                    >
+                    <p
+                    >
+                        <span >Date: {{quotation.quotation_date | date:"Y/m/d"}}</span>
+                    </p>
+                </td>
+                <td
+                    >
+                    <p
+                    >
+                        <span >Date: {{quotation.quotation_date | date:"Y/m/d"}}</span>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <span ></span>
+    </p>
+    <p>
+        <strong><u ><span >Please
+                    Note:</span></u></strong><span ></span>
+    </p>
+    <br>
+
+    <div class="common_font_size">
+        {% for note in quotation.special_note %}
+        {{note | safe}}
+        {% endfor %}
+    </div>
+    </p>
+
+</body>
+
+</html>

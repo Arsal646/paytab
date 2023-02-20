@@ -1,0 +1,59 @@
+.row {
+    display: flex;
+}
+.container{
+margin:0 15vw;
+}
+
+
+.links li,.row li {
+    list-style: none;
+}
+row a{
+text-decoration:none;
+}
+.social_footer ul{
+display:flex;
+gap:10px;
+}
+#dynamic-element-4-3, #dynamic-element-4-67 {
+
+}
+
+.footer_new {
+    margin-top: 50px;
+    background: #643e0f8f;
+}
+.footer_new h3 {
+    font-size: 22px;
+    font-size: 15px;
+    color: white;
+}
+.footer_new li {
+    color: white;
+    margin-top: 14px;
+}
+.footer_new a {
+    color: white;
+}
+.footer_new ul {
+    padding: 0;
+    margin-top: 34px;
+    font-size: 14px;
+}
+.copyright {
+    color: white;
+}
+.slider-absolute-container {
+    border: none !important;
+}
+.bottom-container {
+    box-shadow: -1px 1px 2px #00000047;
+    box-shadow: none !important;
+}
+.page {
+    background: url(https://static.mypaydo.shop/media/grow_it_green_600/Picsart_22-03-10_15-40-43-951-0076a304-3-7d632674-d.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}

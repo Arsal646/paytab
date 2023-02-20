@@ -1,0 +1,52 @@
+
+
+
+.city-walk-section p{
+    line-height: 28px;
+}
+.city-walk-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.city-walk-head h2{
+    font-size: 38px;
+    margin: 50px 0;
+}
+.icon-text{
+    display: flex;
+    align-items: center;
+    gap:10px
+}
+.city-walk-location{
+    display: flex;
+}
+.map{
+    width: 65%;
+}
+.map-content{
+    width: 35%;
+    background-color: #E0E9F1;
+    padding: 40px;
+    line-height: 30px;
+}
+.icon-text ion-icon{
+    font-size: 20px;
+}
+.map-content h3{
+    margin: 20px 0;
+    font-size: 30px;
+}
+@media(max-width:900px){
+    .city-walk-location{
+       flex-direction: column-reverse;
+    }
+    .map,.map-content{
+        width: 100%;
+    }
+    .city-walk-head h2 {
+        text-align: center;
+    }
+
+
+}
