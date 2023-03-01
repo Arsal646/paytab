@@ -1,0 +1,57 @@
+<template>
+  <div>
+    <div class="modal" id="externalLinkModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{ title }}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <iframe id="externalLinkIframe" :src="src"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    title: String,
+    src: String
+  },
+
+  created() {
+    window.addEventListener('message', this.handleIframeMessage, false);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('message', this.handleIframeMessage, false);
+  },
+
+  methods: {
+    handleIframeMessage(event) {
+      if (event.origin !== 'https://example.com') return; // Only accept messages from this domain
+
+      var data = JSON.parse(event.data);
+
+      if (data.type === 'iframeUrlChange') {
+        var iframeUrl = data.url;
+        console.log('The URL of the iframe is ' + iframeUrl);
+
+        var iframe = document.getElementById('externalLinkIframe');
+        var iframeHtml = iframe.contentWindow.document.documentElement.innerHTML;
+        console.log('The HTML content of the iframe is ' + iframeHtml);
+
+        if (iframeHtml.indexOf('<!--CLOSE_MODAL-->') !== -1) {
+          $('#externalLinkModal').modal('hide');
+        }
+      }
+    }
+  }
+};
+</script>
