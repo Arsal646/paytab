@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Disallow Bootstrap Modal to Open on Click Outside Using HTML</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+	<h2>Disallow Bootstrap Modal to Open on Click Outside Using HTML</h2>
+	<button type="button" id="MybtnPreventHTML" class="btn btn-primary" data-target="#MymodalPreventHTML" data-toggle="modal" data-backdrop="static" data-keyboard="false">Open Modal</button>
+	<!-- .modal -->
+	<div class="modal fade" id="MymodalPreventHTML">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h4 class="modal-title">Notification</h4>
+				</div>
+				<div class="modal-body">
+					Are you sure you want to continue?
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#MymodalPreventHTML,#largeModal,#smallModal").modal({
+        show:true,
+        backdrop:'static'
+            });
+        });
+</script>
+</body>
+</html>

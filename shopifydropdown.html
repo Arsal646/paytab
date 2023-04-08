@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dropdown</title>
+        <style>
+        .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dropdown-toggle:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+    </style>
+    </head>
+    <body>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Help!</a>
+            <div class="dropdown-menu">
+                <a href="#">Contact Us</a>
+                <a href="#">Track Order</a>
+            </div>
+        </div>
+
+
+        <div id="message1" class="message" style="display: flex;justify-content: space-between;">
+            <div>
+             MID-SEASON SALE UP TO 70% OFF. <a href="/collections/all" alt="Shop Now">Shop Now!</a>
+            </div>
+            <div class="top-notification-col2"><a href="#">Help</a></div>
+           </div>
+
+           <div id="message2" class="message" style="display: flex;justify-content: space-between;">
+             <div>
+              Free shipping on All Products. No Minimum Purchase.<a href="/collections/all" alt="Shop Now">Shop Now!</a>
+             </div>
+             <div class="top-notification-col2">
+                <a href="#">Help</a>
+            </div>
+            </div>
+
+
+    </body>
+</html>

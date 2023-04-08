@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>salfa</title>
+    <style>
+.tab {
+        position: relative;
+      }
+      .tab input {
+        display: none;
+      }
+      .tab label {
+        display: block;
+        padding: 10px;
+        color: #482e80;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: underline !important;
+      }
+      .tab .tab-content {
+        overflow: hidden;
+        max-height: 0;
+      }
+      .tab input:checked ~ .tab-content {
+        max-height: 100%;
+      }
+      .tab label::after {
+        content: "See More";
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        display: block;
+        transition: all 0.4s;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      .tab input:checked ~ label::after {
+        content: "See Less";
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        display: block;
+        transition: all 0.4s;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      .ltr .tab label::after {
+        content: "See More";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: block;
+        transition: all 0.4s;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      .ltr .tab input:checked ~ label::after {
+        content: "See Less";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: block;
+        transition: all 0.4s;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      .rtl .tab label::after {
+        content: "شاهد المزيد";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: block;
+        transition: all 0.4s;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      .rtl .tab input:checked ~ label::after {
+        content: "رؤية أقل";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: block;
+        transition: all 0.4s;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+
+
+
+
+      .ltr .bg-image{
+            background: url('https://static.mypaydo.shop/media/salfa_game_820/WhatsApp%20Image%202023-03-12%20at%2040330%20PM-1d95ab96-f.jpeg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 200px;
+            min-height: 50px;
+
+            }
+            .rtl .bg-image{
+            background: url('https://static.mypaydo.shop/media/salfa_game_820/WhatsApp%20Image%202023-03-12%20at%2040331%20PM-043c902c-d.jpeg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 200px;
+
+            }
+
+
+            .pdf{
+            display: flex;
+    justify-content: center;
+            }
+    </style>
+  </head>
+  <body>
+
+
+    <div>
+      <p>
+        <strong
+          ><span style="color: #482e80"
+            >It is not just a board game, but while playing it with your
+            friends, you will feel a lot of excitement and fun.</span
+          ></strong
+        >
+      </p>
+      <p>
+        <strong
+          ><span style="color: #482e80"
+            >&ldquo;Salfa&rdquo; begins with a hint told by the storyteller, who
+            changes with the beginning of each round. The hint is inspired by
+            one of the picture cards in the storyteller&rsquo;s hands, while the
+            rest of the players in each round try to reveal his card by guessing
+            the right card, and at the same time the rest of the players try to
+            choose a card that resembles The storyteller&rsquo;s hint. At the
+            end of each round, each player moves steps based on his/her
+            choices.</span
+          ></strong
+        >
+      </p>
+      <div class="tab">
+        <input id="tab-1" type="checkbox" /><label for="tab-1"></label>
+        <div class="tab-content">
+            <p>
+                <strong
+                  ><span style="color: #482e80"
+                    >&ldquo;Salfa&rdquo; is different everytime you play, containing
+                    180 images specially drawn for the game by artists, including
+                    Kuwaitis, and this large number of images opens the way for an
+                    endless number of stories and hints, in addition to 45 action
+                    cards that will increase the intensity of competition and twists
+                    that take place in each round.</span
+                  ></strong
+                >
+              </p>
+
+              <p>
+                <strong
+                  ><span style="color: #482e80"
+                    >In the end, &ldquo;Salfa&rdquo; is not a traditional board game,
+                    as it is an ideal meeting place to retrieve the best stories and
+                    memories that are the basis and foundation of the game, and rest
+                    assured, every game will be unique and different.</span
+                  ></strong
+                >
+              </p>
+        </div>
+      </div>
+      <div class="details">
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <p>
+            <strong
+              ><span style="color: #482e80"
+                >It is not just a board game, but while playing it with your
+                friends, you will feel a lot of excitement and fun.</span
+              ></strong
+            >
+          </p>
+          <p>
+            <strong
+              ><span style="color: #482e80"
+                >&ldquo;Salfa&rdquo; begins with a hint told by the storyteller, who
+                changes with the beginning of each round. The hint is inspired by
+                one of the picture cards in the storyteller&rsquo;s hands, while the
+                rest of the players in each round try to reveal his card by guessing
+                the right card, and at the same time the rest of the players try to
+                choose a card that resembles The storyteller&rsquo;s hint. At the
+                end of each round, each player moves steps based on his/her
+                choices.</span
+              ></strong
+            >
+          </p>
+        <div class="tab">
+          <input id="tab-1" type="checkbox" /><label for="tab-1"></label>
+          <div class="tab-content">
+            <p>
+                <strong
+                  ><span style="color: #482e80"
+                    >&ldquo;Salfa&rdquo; is different everytime you play, containing
+                    180 images specially drawn for the game by artists, including
+                    Kuwaitis, and this large number of images opens the way for an
+                    endless number of stories and hints, in addition to 45 action
+                    cards that will increase the intensity of competition and twists
+                    that take place in each round.</span
+                  ></strong
+                >
+              </p>
+
+              <p>
+                <strong
+                  ><span style="color: #482e80"
+                    >In the end, &ldquo;Salfa&rdquo; is not a traditional board game,
+                    as it is an ideal meeting place to retrieve the best stories and
+                    memories that are the basis and foundation of the game, and rest
+                    assured, every game will be unique and different.</span
+                  ></strong
+                >
+              </p>
+          </div>
+        </div>
+        <div class="details"></div>
+      </div>
+  </body>
+</html>
+
+
+<div>
+  <p><strong><span style="color: #482e80">It is not just a board game, but while playing it with your friends, you will feel a lot of excitement and fun.</span></strong></p>
+
+  <p><strong><span style="color: #482e80">&ldquo;Salfa&rdquo; begins with a hint told by the storyteller, who changes with the beginning of each round. The hint is inspired by one of the picture cards in the storyteller&rsquo;s hands, while the rest of the players in each round try to reveal his card by guessing the right card, and at the same time the rest of the players try to choose a card that resembles The storyteller&rsquo;s hint. At the end of each round, each player moves steps based on his/her choices.</span></strong></p>
+
+  <div class="tab"><input id="tab-1" type="checkbox" />
+  <div class="tab-content">
+  <p><strong><span style="color: #482e80">&ldquo;Salfa&rdquo; is different everytime you play, containing 180 images specially drawn for the game by artists, including Kuwaitis, and this large number of images opens the way for an endless number of stories and hints, in addition to 45 action cards that will increase the intensity of competition and twists that take place in each round.</span></strong></p>
+
+  <p><strong><span style="color: #482e80">In the end, &ldquo;Salfa&rdquo; is not a traditional board game, as it is an ideal meeting place to retrieve the best stories and memories that are the basis and foundation of the game, and rest assured, every game will be unique and different.</span></strong></p>
+  </div>
+  </div>
+
+  <div class="details">&nbsp;</div>
+  </div>

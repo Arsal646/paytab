@@ -1,0 +1,1253 @@
+<template>
+    <main>
+      <section class="pageTitleBar clearfix">
+
+        <div>
+          <div class="modal fade" id="externalLinkModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <iframe   id="externalLinkIframe"   width="100%" height="500px" frameborder="0"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h1 class="title">
+                Product
+                <span class="text-yellow font-weight-light">Shopping Cart</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="mt20">
+        <div v-if="loading" class="modal-loading">
+          <div class="loading-content">
+            <p>Payment Processing</p>
+            <img src="/shop/loading.gif" height="300" />
+          </div>
+        </div>
+        <div v-if="magnatiForm_loading" class="modal-loading">
+          <div class="loading-content">
+            <!-- <p>Initializing</p> -->
+            <img src="/shop/loading.gif" height="300" />
+          </div>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center page-shoppingCart">
+            <div class="shoppingCart-details col-lg-8 col-md-12">
+              <div class="card mb20" v-if="cards.length">
+                <div class="card-header">
+                  <h5 class="m0">Select Card:</h5>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div
+                      v-for="(card, index) in cards"
+                      :key="index"
+                      class="col-lg-4 col-md-6 col-sm-6 address-checkout"
+                    >
+                      <div
+                        class="card mb20 address-checkout"
+                        :class="{ disable: loading }"
+                      >
+                        <div
+                          :class="{ selectedCard: card.selected }"
+                          @click="selectCard(index)"
+                          class="card-header address-checkout d-block"
+                        >
+                          <!--                                                    <div class="text-right">-->
+                          <!--                                                        <i class="large material-icons" data-toggle="tooltip"-->
+                          <!--                                                           title="Remove card"-->
+                          <!--                                                           @click="deleteCard(card, index)">delete_forever</i></div>-->
+                          <div class="px-0">
+                            <p class="mb0 pt-3 cardNumber">
+                              {{ cardNumberData(card.maskedPan) }}
+                            </p>
+                            <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="mb0">{{ card.cardholderName }}</p>
+                                <p class="mb0">
+                                  {{ new Date(card.expiry).getMonth() + 1 }}/{{
+                                    new Date(card.expiry).getYear() - 100
+                                  }}
+                                </p>
+                              </div>
+                              <img :src="cardLogo[card.scheme]" />
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /card-header -->
+                      </div>
+                      <!--/card-->
+                    </div>
+                  </div>
+                </div>
+                <!-- card-body -->
+              </div>
+              <div class="card mb20">
+                <div class="card-header">
+                  <h5>Add New Card</h5>
+                </div>
+
+                <!-- <div class="m-4">
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" value="paytab" v-model="SelectedCard" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      PayTab
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input"  value="magnati" v-model="SelectedCard" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Magnati
+                    </label>
+                  </div>
+                </div> -->
+
+                <div class="card-body" v-if="SelectedCard=='paytab'">
+                  <div class="m-2 mb-4">
+                    <h5>PayTab</h5>
+                  </div>
+                  <form name="newCard" id="paymentform">
+                    <span id="errors"></span>
+                    <div class="form-row">
+                      <div class="col-sm-12 col-md-8 mb-2">
+                        <div
+                          class="form-group input-group position-relative mb-0">
+                          <label for="cardNumber" class="card-input-label"
+                            >Card Number</label>
+                          <input
+                            v-cardformat:formatCardNumber
+                            v-model="pan"
+                            class="form-control card-input-input mr-0"
+                            id="cardNumber"
+                            name="cardNumber"
+                            inputmode="numeric"
+                            ref="cardNumInput"
+                            aria-describedby="basic-addon2"
+                            data-paylib="number"
+                          />
+                          <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">
+                              <img
+                                v-if="mapLogoCard[cardBrand]"
+                                :src="mapLogoCard[cardBrand]"
+                                height="32"
+                              />
+                            </span>
+                          </div>
+                        </div>
+                        <div v-if="cardErrors.pan" class="error text-danger">
+                          <small>{{ cardErrors.pan }}</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row card-form-row">
+                      <div class="form-group col-md-8 d-flex mb-2 date-cvv">
+                        <div class="card-form-col">
+                          <div class="form-group card-form-group">
+                            <label for="cardMonth" class="card-input-label">
+                              Expiration Date
+                            </label>
+                            <div class="col pl-0">
+                              <select
+                                class="card-input-input -select"
+                                id="cardMonth"
+                                v-model="cardMonth"
+                                data-ref="cardDate"
+                                data-paylib="expmonth"
+                              >
+                                <option value disabled selected>Month</option>
+                                <option
+                                  :value="n < 10 ? '0' + n : n"
+                                  v-for="n in 12"
+                                  :disabled="n < minCardMonth"
+                                  :key="n"
+                                  >{{ returnMonth(n) }}</option
+                                >
+                              </select>
+                              <div
+                                v-if="cardErrors.pan"
+                                class="error text-danger"
+                              >
+                                <small>{{ cardErrors.month }}</small>
+                              </div>
+                            </div>
+                            <div class="col px-0">
+                              <select
+                                class="card-input-input -select"
+                                id="cardYear"
+                                v-model="cardYear"
+                                data-ref="cardDate"
+                                data-paylib="expyear"
+                              >
+                                <option value disabled selected>Year</option>
+                                <option
+                                  :value="$index + minCardYear"
+                                  v-for="(n, $index) in 12"
+                                  :key="n"
+                                  >{{ $index + minCardYear }}</option
+                                >
+                              </select>
+                              <div
+                                v-if="cardErrors.pan"
+                                class="error text-danger"
+                              >
+                                <small>{{ cardErrors.year }}</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-form-col -cvv">
+                          <div class="card-input">
+                            <label for="cardCvv" class="card-input-label"
+                              >CVV</label
+                            >
+                            <input
+                              v-cardformat:formatCardCVC
+                              type="password"
+                              class="card-input-input"
+                              ref="cardCvcInput"
+                              :data-error="cardErrors.cardCvv ? true : false"
+                              id="cardCvv"
+                              v-model="cardCvv"
+                              data-paylib="cvv"
+                            />
+                            <div
+                              v-if="cardErrors.cardCvv"
+                              class="error text-danger"
+                            >
+                              <small>{{ cardErrors.cardCvv }}</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-8">
+                        <label class="card-input-label">Card Holders</label>
+                        <input
+                          id="cardholderName"
+                          v-model="cardholderName"
+                          class="form-control card-input-input"
+                          name="cardholderName"
+                        />
+                      </div>
+                    </div>
+
+                    <div v-if="errorCard" class="invalid-card">
+                      Your data credit card are invalid
+                    </div>
+
+                    <!-- <button
+                      :disabled="loading" type="submit"
+                      class="btn btn-primary xs-margin-bottom-five no-margin float-left"
+                      @click.prevent="submitPayment"
+                      >Review Order</button
+                    > -->
+                    <input class="btn btn-primary xs-margin-bottom-five no-margin float-left"  type="submit" value="Review Order">
+                  </form>
+                </div>
+                <div class="card-body" v-if="SelectedCard=='magnati'">
+                  <div class="m-2 mb-4">
+                    <h5>Magnati</h5>
+                  </div>
+                  <div class="magnatiCard">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <label for="card-number">Card Number:</label>
+                          <input type="text" id="card-number" class="form-control" title="card number" aria-label="enter your card number" value="" tabindex="1" readonly>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label for="expiry-month">Expiry Month:</label>
+                          <input type="text" id="expiry-month" class="form-control" title="expiry month" aria-label="two digit expiry month" value="" tabindex="2" readonly>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="expiry-year">Expiry Year:</label>
+                          <input type="text" id="expiry-year" class="form-control" title="expiry year" aria-label="two digit expiry year" value="" tabindex="3" readonly>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="security-code">Security Code:</label>
+                          <input type="text" id="security-code" class="form-control" title="security code" aria-label="three digit CCV security code" value="" tabindex="4" readonly>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <label for="cardholder-name">Cardholder Name:</label>
+                          <input type="text" id="cardholder-name" class="form-control" title="cardholder name" aria-label="enter name on card" value="" tabindex="5" readonly>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <button id="payButton" class="btn btn-primary xs-margin-bottom-five no-margin float-left mt-2" @click="pay">Review Order</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- /card-body -->
+              </div>
+            </div>
+            <!-- /col -->
+
+            <div class="shoppingCart-ammunt col-lg-4 col-md-12">
+              <div class="card mb20 p20">
+                <div class="card-header">
+                  <h5>Selected Address</h5>
+                </div>
+                <!-- /card-header -->
+                <div class="card-body">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <ul class="list">
+                        <li class="address-checkout">
+                          <h4 class="mb0">
+                            <i class="material-icons">room</i>
+                            {{ address.address_name }}
+                          </h4>
+                          <p class="mb0">
+                            {{ address.last_name }} {{ address.first_name }}
+                          </p>
+                          <p class="mb0">{{ address.address }}</p>
+                          <p class="mb0">
+                            {{ address.city }} / {{ address.country }}
+                          </p>
+                          <p class="mb0">{{ address.p_contact }}</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- /card-body -->
+              </div>
+              <!--/card-->
+
+              <div class="card mb20 p20">
+                <div class="card-header">
+                  <h5>Selected Delivery Type</h5>
+                </div>
+                <!-- /card-header -->
+                <div class="card-body">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <ul class="list">
+                        <li v-if="$cookies.get('delivery_option') === 1">
+                          <label class="form-check-label" style="padding:0"
+                            >Deliver all together</label
+                          >
+                          <p class="small">
+                            Your items will be sent in one package
+                          </p>
+                        </li>
+                        <li v-else>
+                          <label class="form-check-label" style="padding:0"
+                            >Deliver as they arrive</label
+                          >
+                          <p class="small">
+                            ({{ $store.state.activeStore.currency }}
+                            {{
+                              $store.state.activeStore.delivery_price
+                            }}/additional package)
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- /card-body -->
+              </div>
+              <!--/card-->
+
+              <div class="card p20 mb20">
+                <ul class="list">
+                  <li>
+                    <h5>
+                      Subtotal
+                      <span
+                        class="float-right"
+                        v-html="$formatPrice($store.getters.cartTotal, false)"
+                      />
+                    </h5>
+                  </li>
+                  <li>
+                    <h5>
+                      Delivery
+                      <span
+                        class="float-right"
+                        v-if="parseInt($cookies.get('delivery_price'))"
+                      >
+                        {{ $store.state.activeStore.currency }}
+                        <span
+                          v-html="$formatPrice($cookies.get('delivery_price'))"
+                        />
+                      </span>
+                      <span class="float-right" v-else>Free</span>
+                    </h5>
+                  </li>
+                  <li>
+                    <h5>
+                      Total (Inc. VAT)
+                      <span
+                        class="float-right"
+                        v-html="$formatPrice(totalPrice, false)"
+                      />
+                    </h5>
+                  </li>
+                  <li v-if="showVAT()">
+                    <h5 style="font-size:12px;">
+                      VAT
+                      <span
+                        class="float-right"
+                        v-html="$formatPrice(VATamount, false)"
+                      />
+                    </h5>
+                  </li>
+                  <li>
+                    <a
+                      class="btn btn-secondary btn-cancel mi-1"
+                      href="/checkout/shippingoptions"
+                    >
+                      <i class="material-icons">arrow_back</i> Shipping Options
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /card -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </template>
+  <script>
+  import Vue from 'vue';
+
+  import VueCardFormat from 'vue-credit-card-validation';
+
+  Vue.use(VueCardFormat);
+
+  import {mapState} from 'vuex';
+
+  if (process.client) {
+    require('static/js/jquery-3.4.1.slim.min.js');
+    require('static/js/script.js');
+    require('static/js/amazon-autocomplete.min.js');
+  }
+
+  export default {
+    name: 'PaymentOptions',
+    async asyncData({app, store}) {
+      await store.state.productsReq;
+      const response = await app
+          .$api({
+            method: 'GET',
+            url: '/platform/api/payments/card-tokens-client',
+          })
+          .catch((err) => {
+            console.log('tokens request failed');
+          });
+
+      const address = await app
+          .$api({
+            method: 'GET',
+            url: '/platform/api/adresses/' + app.$cookies.get('delivery_address'),
+          })
+          .catch((err) => {
+            console.log('failed to create orders');
+          });
+      return {
+        cards: response.data.data.tokens,
+        address: address.data.data,
+      };
+    },
+    head() {
+      return {
+        title: 'Binge - Cart',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content:
+              'Browse 12+ Million products including: Beauty, Books, Electronics, Home &amp; Garden, Kitchen, Office Products, Sporting Goods, Toys and more. Free Shipping in ' +
+              this.$store.state.countryName +
+              '!',
+          },
+        ],
+        script: [
+          {src: 'https://paypage.ngenius-payments.com/hosted-sessions/sdk.js'},
+          {src:'https://secure.paytabs.com/payment/js/paylib.js'},
+          {src:'https://ap-gateway.mastercard.com/form/version/69/merchant/TEST855212000/session.js'}
+        ],
+      };
+    },
+    middleware: ['authenticated', 'setDelivery', 'setAddress'],
+    data() {
+      return {
+        cards: null,
+        address: null,
+        orders: [],
+        tokenId: null,
+        selected: false,
+        errors: [],
+        networkSessionId: null,
+        cardLogo: {
+          DINERS_CLUB_INTERNATIONAL: '/shop/cardLogos-diners.svg',
+          VISA: '/shop/cardLogos-visa.svg',
+          MASTERCARD: '/shop/cardLogos-mastercard.svg',
+          AMERICAN_EXPRESS: '/shop/cardLogos-amex.svg',
+          UNIONPAY: '/shop/cardLogos-unionpay.svg',
+          DISCOVER: '/shop/cardLogos-discover.svg',
+        },
+        mapLogoCard: {
+          dinersclub: '/shop/cardLogos-diners.svg',
+          visa: '/shop/cardLogos-visa.svg',
+          mastercard: '/shop/cardLogos-mastercard.svg',
+          amex: '/shop/cardLogos-amex.svg',
+          unionpay: '/shop/cardLogos-unionpay.svg',
+          discover: '/shop/cardLogos-discover.svg',
+        },
+        loading: false,
+        errorCard: false,
+        cardholderName: null,
+        pan: null,
+        cardMonth: '',
+        cardYear: '',
+        cardCvv: null,
+        minCardYear: new Date().getFullYear(),
+        cardBrand: null,
+        cardErrors: [],
+        topic: '',
+        mercure_api:'http://192.168.10.172:3000',
+        authorization:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJzY3JpYmVyIjoiQmluZ2UifQ.p6MVJloWbCKkWPOIpK-T9ix4f9XChh8xETwSb0xAR6E',
+        SelectedCard:'magnati',
+        magnati_sessionID:'',
+        magnatiForm_loading:false
+      };
+    },
+    computed: {
+      ...mapState(['cartUIStatus']),
+      totalPrice() {
+        return (
+          Number(this.$cookies.get('delivery_price')) +
+          Number(this.$store.getters.cartTotal)
+        ).toFixed(2);
+      },
+      totalPriceWithoutVAT() {
+        return (
+          (
+            Number(this.$cookies.get('delivery_price')) +
+            Number(this.$store.getters.cartTotal)
+          ).toFixed(2) / this.$store.state.activeStore.vat
+        ).toFixed(2);
+      },
+      VATamount() {
+        return (this.totalPrice - this.totalPriceWithoutVAT).toFixed(2);
+      },
+      minCardMonth() {
+        if (this.cardYear === this.minCardYear) return new Date().getMonth() + 1;
+        return 1;
+      },
+      computedAddress() {
+        return this.address;
+      }
+    },
+    watch: {
+      cardYear() {
+        if (this.cardMonth < this.minCardMonth) {
+          this.cardMonth = '';
+        }
+      },
+      async SelectedCard(newValue, oldValue) {
+      //   if(newValue=='magnati'){
+      //   this.$cookies.set('CardSelected', 'magnati', {
+      //     path: '/',
+      //     maxAge: 60 * 60 * 24,
+      //   });
+      //  // window.location.href = '/checkout/paymentoptions';
+      //   }else{
+      //     this.$cookies.set('SelectedCard', 'paytab', {
+      //     path: '/',
+      //     maxAge: 60 * 60 * 24,
+      //   });
+      //   }
+      console.log(this.SelectedCard)
+      }
+    },
+    async mounted() {
+      if(this.SelectedCard=='magnati'){
+        await this.getMagnatiSessionId()
+        console.log('hiiiiiiii')
+      }else if(this.SelectedCard=='paytab'){
+            var form = document.getElementById('paymentform');
+                try {
+                  const response = await paylib.inlineForm({
+                  key: 'C9KMDM-VV6KH9-HHRHQ9-7629D6',
+                  form: form,
+                  autoSubmit: false,
+                  callback: (response) => {
+                    this.getAuthorization(response);
+                  }
+                })
+            } catch (error) {
+              console.error('Error:', error);
+            }
+      }
+      // const script = document.createElement('script')
+      // script.src = 'https://secure.paytabs.com/payment/js/paylib.js'
+      // document.body.appendChild(script)
+     // this.webSocketConnection()
+      // const style = {
+      //   main: {} /* the style for the main wrapper div around the card input*/,
+      //   base: {} /* this is the default styles that comes with it */,
+      //   input: {
+      //     borderColor: '#ababab',
+      //     borderWidth: '1px',
+      //     borderStyle: 'solid',
+      //     borderRadius: '3px',
+      //     fontSize: '1em',
+      //     padding: '.375rem .75rem',
+      //     height: 'calc(1.5em + .75rem + 2px)',
+      //   } /* custom style options for the input fields */,
+      //   invalid: {} /* custom input invalid styles */,
+      // };
+
+      // window.NI.mountCardInput('outerdiv', {
+      //   style: style,
+      //   apiKey: 'YzZjOTMyYmQtNWNmYy00NzEzLWI0MWMtMjgxOGI0NmI0ZDY3OjYwZjMzZGQ0LTgwNDYtNDE0NC05ZDAyLWUxNDMzMmE0N2Q1NQ==',
+      //   outletRef: 'a6e5bbd9-6108-47ac-a609-083894eadfb4',
+      //   onSuccess: (data) => {
+      //     console.log('---- data ----');
+      //     console.log(data);
+      //   },
+      //   onFail: (error) => {
+      //     console.log('---- fail ----');
+      //     console.log(error);
+      //   },
+      //   onChangeValidStatus: ({isCVVValid, isExpiryValid, isNameValid, isPanValid}) => {
+      //     console.log('---- status ----');
+      //     console.log(isCVVValid, isExpiryValid, isNameValid, isPanValid);
+      //   // }
+      // });
+    },
+    created() {
+      this.setDataLayer();
+    },
+    methods: {
+      initPaymentSession() {
+      //  this.magnatiForm_loading=true
+        let me=this
+        let initializedCallbackTriggered = false; // keep track of whether the initialized callback has been triggered
+        PaymentSession.configure({
+        session: this.magnati_sessionID,
+        fields: {
+          // ATTACH HOSTED FIELDS TO YOUR PAYMENT PAGE FOR A CREDIT CARD
+          card: {
+            number: "#card-number",
+            securityCode: "#security-code",
+            expiryMonth: "#expiry-month",
+            expiryYear: "#expiry-year",
+            nameOnCard: "#cardholder-name"
+          }
+        },
+        //SPECIFY YOUR MITIGATION OPTION HERE
+        frameEmbeddingMitigation: ["javascript"],
+        callbacks: {
+          initialized: function(response) {
+            // HANDLE INITIALIZATION RESPONSE
+            initializedCallbackTriggered = true; // set the flag to true when the callback is triggered
+            me.magnatiForm_loading=false
+            console.log(response)
+          },
+          formSessionUpdate:async function(response) {
+            console.log('hiii2')
+            let error=response.errors
+            let sentence = '';
+            for (let key in error) {
+              sentence += `The ${key} is ${error[key]}. `;
+            }
+             me.$toast.error(sentence, {position: 'top-center', duration: 5000});
+            // HANDLE RESPONSE FOR UPDATE SESSION
+            if (response.status) {
+              if ("ok" == response.status) {
+              //  console.log("Session updated with data: " + response.session.id);
+              try {
+                  const formData= {
+                    address_id: me.computedAddress.id,
+                    order_ids:me.$cookies.get('order_ids'),
+                    provider:'Magnati'
+                  };
+                    let url='http://192.168.10.172:8001/api/card/register'
+                    me.loading = true;
+                    me.$api({
+                      method: 'POST',
+                      url: url,
+                      data: formData,
+                      }).then(async res=>{
+                        const token=res.data.data.data.token.id
+                          await me.addPayments(token)
+                }).catch(err=>{
+                        console.log(err)
+                })
+                } catch (err) {
+                  me.loading = false;
+                  me.$log.error('Payment', JSON.stringify(err));
+                }
+                console.log('register call done')
+                //check if the security code was provided by the user
+                if (response.sourceOfFunds.provided.card.securityCode) {
+                  console.log("Security code was provided.");
+                }
+
+                //check if the user entered a Mastercard credit card
+                if (response.sourceOfFunds.provided.card.scheme == 'MASTERCARD') {
+                  console.log("The user entered a Mastercard credit card.")
+                }
+              }
+            }
+          }
+        }
+      });
+        //     // Check if the initialized callback has been triggered after a certain amount of time (e.g., 5 seconds)
+        // setTimeout(function() {
+        //   if (!initializedCallbackTriggered) {
+        //     console.log('initialized callback did not trigger');
+        //     window.location.reload(); // refresh the page if the callback did not trigger
+        //   }
+        // }, 6000);
+        },
+     pay: async function() {
+          // this.initPaymentSession()
+          await this.getMagnatiSessionId()
+          // UPDATE THE SESSION WITH THE INPUT FROM HOSTED FIELDS
+          PaymentSession.updateSessionFromForm('card');
+        },
+     addToken(){
+          const me=this
+          try {
+
+          let url='http://192.168.10.172:8001/api/payments/token'
+          me.loading = true;
+          me.$api({
+            method: 'POST',
+            url: url
+            }).then(async res=>{
+              let token_id=res.data.data.data.token.id
+              me.addPayments(token_id)
+
+          }).catch(err=>{
+              console.log(err)
+          })
+          } catch (err) {
+          me.loading = false;
+          me.$log.error('Payment', JSON.stringify(err));
+          }
+        },
+        getMagnatiSessionId(){
+          this.$api({
+          method: 'GET',
+          url: `http://192.168.10.172:8001/api/card/session`,
+        })
+            .then((response) => {
+              this.magnati_sessionID=response.data.data.session_id
+              //console.log('session_id_from _api',this.magnati_sessionID)
+              this.initPaymentSession()
+            })
+            .catch((error) => {
+              console.log('error',error);
+            });
+        },
+      openExternalLink(link) {
+            // Set the iframe src to the external link
+                const iframe = document.getElementById('externalLinkIframe')
+                if(this.SelectedCard=='magnati'){
+                  const html=link
+                   iframe.srcdoc = html
+                }
+                else if(this.SelectedCard=='paytab'){
+                  iframe.src = link
+                }
+                // Show the modal
+                $('#externalLinkModal').modal('show')
+        },
+         webSocketConnection(topic,external_link){
+          console.log(`${this.mercure_api}/.well-known/mercure`)
+          this.openExternalLink(external_link)
+          const url = new URL(`${this.mercure_api}/.well-known/mercure`);
+          url.searchParams.append('topic', topic);
+          url.searchParams.append('authorization',this.authorization);
+          const es = new EventSource(url);
+          es.onmessage = async e => {
+              //console.log(JSON.parse(e.data));
+              const res=JSON.parse(e.data)
+                // hide the modal
+                $('#externalLinkModal').modal('hide')
+              const token_id=res.data.token.id
+                await this.addPayments(token_id);
+                 // set payment token
+                this.$cookies.set('card_token_id', token_id, {
+                    path: '/',
+                    maxAge: 60 * 60 * 24,
+                  });
+                this.loading = false;
+               // window.location.href = '/checkout/review';
+          }
+        },
+      returnMonth(value) {
+        return value < 10 ? '0' + value : value;
+      },
+      cardNumberData(value) {
+        switch (value.length) {
+          case 16:
+            return (
+              value.slice(0, 4) +
+              ' ' +
+              value.slice(4, 8) +
+              ' ' +
+              value.slice(8, 12) +
+              ' ' +
+              value.slice(12, 16)
+            );
+          case 15:
+            return (
+              value.slice(0, 4) +
+              ' ' +
+              value.slice(4, 7) +
+              ' ' +
+              value.slice(7, 11) +
+              ' ' +
+              value.slice(11, 15)
+            );
+          case 14:
+            return (
+              value.slice(0, 4) +
+              ' ' +
+              value.slice(4, 7) +
+              ' ' +
+              value.slice(7, 10) +
+              ' ' +
+              value.slice(10, 14)
+            );
+          case 13:
+            return (
+              value.slice(0, 3) +
+              ' ' +
+              value.slice(3, 6) +
+              ' ' +
+              value.slice(6, 9) +
+              ' ' +
+              value.slice(9, 13)
+            );
+          case 12:
+            return (
+              value.slice(0, 4) +
+              ' ' +
+              value.slice(4, 8) +
+              ' ' +
+              value.slice(8, 12)
+            );
+        }
+      },
+      deleteCard(card, index) {
+        this.$api({
+          method: 'DELETE',
+          url: `/platform/api/payments/token/${card.id}`,
+        })
+            .then((response) => {
+              this.cards.splice(index, 1);
+            })
+            .catch((error) => {
+              console.log('error');
+            });
+      },
+      async submitPayment() {
+              var me=this
+              var form = document.getElementById('paymentform');
+              try {
+                paylib.inlineForm({
+                key: 'C9KMDM-VV6KH9-HHRHQ9-7629D6',
+                form: form,
+                autoSubmit: true,
+                callback: (response) => {
+                  this.getAuthorization(response);
+                }
+              })
+          } catch (error) {
+            console.error('Error:', error);
+          }
+      },
+      resetform(){
+        this.cardMonth=''
+        this.cardYear='',
+        this.cardCvv='',
+        this.pan='',
+        this.cardholderName=''
+
+      },
+        getAuthorization(response){
+        if(response.status===501 || response.status===500){
+          this.$toast.error(response.errorText, {position: 'top-center', duration: 5000});
+          this.resetform()
+        }
+        try {
+          const me = this;
+          const paytabToken=response.token
+          const formData = { paymentToken: paytabToken,address_id: this.computedAddress.id};
+            let url='/platform/api/card/register'
+            this.loading = true;
+             this.$api({
+              method: 'POST',
+              url: url,
+              data: formData,
+              }).then(async res=>{
+                if(res.data.data.redirect_url){
+                  const url=res.data.data.redirect_url
+                  this.topic=res.data.data.tran_ref
+                  this.loading = false;
+                  this.webSocketConnection(this.topic,url)
+                }else{
+                const token_id=res.data.data.data.token.id
+                await this.addPayments(token_id);
+                this.loading = false;
+
+                }
+              }).catch(err=>{
+                console.log(err)
+              })
+        } catch (err) {
+          this.errorCard = true;
+          this.loading = false;
+          this.$log.error('Payment', JSON.stringify(err));
+        }
+      },
+
+      registerMagnatiCard(){
+        try {
+          const me = this;
+          const paytabToken=response.token
+          const formData= { address_id: this.computedAddress.id,order_id:me.$cookies.get('order_ids'),provider:'Magnati'};
+          let url='http://192.168.10.172:8001/api/card/register'
+          this.loading = true;
+            this.$api({
+            method: 'POST',
+            url: url,
+            data: formData,
+            }).then(async res=>{
+
+            }).catch(err=>{
+              console.log(err)
+            })
+        } catch (err) {
+          this.errorCard = true;
+          this.loading = false;
+          this.$log.error('Payment', JSON.stringify(err));
+        }
+      },
+
+      async saveCard() {
+        this.cardErrors = {};
+
+        if (!this.$cardFormat.validateCardNumber(this.pan)) {
+          this.cardErrors.pan = 'Invalid Credit Card Number.';
+        }
+        if (!this.$cardFormat.validateCardCVC(this.cardCvv)) {
+          this.cardErrors.cardCvv = 'Invalid CVV.';
+        }
+        if (!this.cardMonth) {
+          this.cardErrors.month = 'Month required.';
+        }
+        if (!this.cardYear) {
+          this.cardErrors.year = 'Year required.';
+        }
+        if (Object.keys(this.cardErrors).length) {
+          this.loading = false;
+          this.errorCard = true;
+          this.$log.error('Payment', JSON.stringify(this.cardErrors));
+
+          return;
+        }
+        let verificationResponse = null; // for firefox - workaround
+
+        this.loading = true;
+        try {
+          const me = this;
+
+          verificationResponse = await this.$api({
+            url: '/platform/api/card/validate',
+            method: 'POST',
+            data: {
+              cardholderName: this.cardholderName,
+              pan: this.pan.replace(/\s/g, ''),
+              expiry: this.cardYear + '-' + this.cardMonth,
+              cvv: this.cardCvv,
+            },
+          }).catch((err) => {
+            this.$log.error('Payment', JSON.stringify(err));
+          });
+
+          if (verificationResponse.data.state === 'VERIFIED') {
+            const paymentResponse = await this.$api({
+              url: '/platform/api/payments/token',
+              method: 'POST',
+              data: {
+                paymentResponse: verificationResponse.data,
+                orderIds: me.$cookies.get('order_ids'),
+              },
+            }).catch((err) => {
+              this.$log.error('Payment', err);
+            });
+            this.$cookies.set(
+                'card_token_id',
+                paymentResponse.data.data.data.token.id,
+                {
+                  path: '/',
+                  maxAge: 60 * 60 * 24,
+                },
+            );
+            await this.addPayments();
+          } else {
+            this.errorCard = true;
+            this.loading = false;
+            const message = `ID:${verificationResponse.data._id}.Status:${verificationResponse.data.state}.resultMessage:${verificationResponse.data.verifyResponse.resultMessage}.resultCode:${verificationResponse.data.verifyResponse.resultCode}`;
+            this.$log.info('Payment', message);
+          }
+        } catch (err) {
+          this.errorCard = true;
+          this.loading = false;
+          this.$log.error('Payment', JSON.stringify(err));
+        }
+      },
+      async selectCard(index) {
+        let token_id=this.cards[index].id
+        this.$cookies.set('card_token_id', token_id, {
+          path: '/',
+          maxAge: 60 * 60 * 24,
+        });
+        await this.addPayments(token_id);
+      },
+      async addPayments(token_id){
+        this.$cookies.set('card_token_id', token_id, {
+          path: '/',
+          maxAge: 60 * 60 * 24,
+        });
+        this.loading = true;
+        let formData={}
+        if(this.SelectedCard==='magnati'){
+          formData= {
+            token_id: token_id,
+            order_ids: this.$cookies.get('order_ids'),
+            provider:"Magnati"
+          }
+        }else if(this.SelectedCard=== 'paytab'){
+          formData= {
+            token_id: token_id,
+            order_ids: this.$cookies.get('order_ids'),
+            provider:"Paytabs"
+          }
+        }
+        await this.$api({
+          method: 'POST',
+          url: `http://192.168.10.172:8001/api/cart/checkout/payments`,
+          data: formData,
+        }).then(res=>{
+          this.loading = false;
+          if(res){
+            window.location.href = '/checkout/review';
+          }
+        })
+        .catch((err) => {
+          console.log('failed to create payments');
+        });
+        this.loading = false;
+      },
+      showVAT() {
+        const showVAT = {
+          BH: 'BH',
+          SA: 'SA',
+          AE: 'AE',
+        };
+        return Object.keys(showVAT).find(
+            (key) => showVAT[key] === this.$store.state.activeStore.country_code,
+        );
+      },
+      async setDataLayer() {
+        const dataLayer = []
+        const me = this;
+        const products = [];
+        me.$store.state.cart.products.forEach(function(product) {
+          products.push({
+            name: product.title,
+            id: product.product_bsin,
+            price: product.price_local,
+            brand: product.brand,
+            category: product.category,
+            quantity: product.quantity,
+          });
+        });
+        dataLayer.push({
+          event: 'checkout',
+          ecommerce: {
+            checkout: {
+              actionField: {step: 3},
+              products: products,
+            },
+          },
+        });
+
+        return {dataLayer};
+      },
+    },
+  };
+  </script>
+  <style id="" lang="scss" scoped>
+  .layout-new .entryforms .form-control, .layout-new .form-control {
+    border-radius: 0 !important;
+
+  }
+  @media(min-width:900px){
+    .magnatiCard{
+      width: 70%;
+    }
+  }
+  .modal-loading {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .loading-content {
+      background: #fff;
+      z-index: 99;
+      top: 30%;
+      position: fixed;
+      text-align: center;
+      transform: translate(-50%);
+
+      @media (min-width: 576px) {
+        width: 500px;
+        height: 350px;
+        border-radius: 5px;
+        margin: 1.75rem auto;
+        border: 1px solid #fbaf40;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+        margin-top: 30px;
+      }
+    }
+  }
+  .card-header.address-checkout {
+    img {
+      width: 40px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .cardNumber {
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: 4px;
+      font-weight: 500;
+      padding-bottom: 15px;
+    }
+  }
+
+  .address-checkout.disable {
+    pointer-events: none;
+  }
+
+  .invalid-card {
+    color: #ed1a3b;
+    font-weight: 600;
+    @media screen and(max-width: 578px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .card-input-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #1a3b5d;
+    width: 100%;
+    display: block;
+    user-select: none;
+  }
+
+  .card-input-input {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #ced6e0;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    padding: 5px 15px;
+    color: #1a3b5d;
+    margin-right: 15px;
+    flex: 1;
+    @media screen and(max-width: 578px) {
+      font-size: 16px;
+    }
+  }
+
+  .card-form-col {
+    flex: auto;
+    margin-right: 35px;
+  }
+
+  .card-form-col:last-child {
+    margin-right: 0;
+  }
+
+  .card-form-col.-cvv {
+    max-width: 150px;
+  }
+
+  .card-form-group {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .card-form-row {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .form-row {
+    .form-group.input-group > .form-control:not(:first-child) {
+      border-top-left-radius: 5px !important;
+      border-bottom-left-radius: 5px !important;
+      border-right: none;
+    }
+
+    .input-group-text {
+      background: #fff;
+    }
+    .date-cvv {
+      @media screen and(max-width: 578px) {
+        flex-wrap: wrap;
+        .card-form-col {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+  </style>

@@ -1,0 +1,17 @@
+{% if product.metafields.custom.minimum_expected_delivery_time and
+product.metafields.custom.maximum_expected_delivery_time %} {% assign
+minimum_delivery_time = 'now' | date: '%s' | plus:
+product.metafields.custom.minimum_expected_delivery_time | date: '%Y-%m-%d' %}
+{% assign maximum_delivery_time = 'now' | date: '%s' | plus:
+product.metafields.custom.maximum_expected_delivery_time | date: '%Y-%m-%d' %}
+Your order will be delivered between {{ minimum_delivery_time }} and {{
+maximum_delivery_time }}. {% elsif
+product.metafields.custom.minimum_expected_delivery_time %} {% assign
+delivery_time = 'now' | date: '%s' | plus:
+product.metafields.custom.minimum_expected_delivery_time | date: '%Y-%m-%d' %}
+Your order will be delivered by {{ delivery_time }}. {% elsif
+product.metafields.custom.maximum_expected_delivery_time %} {% assign
+delivery_time = 'now' | date: '%s' | plus:
+product.metafields.custom.maximum_expected_delivery_time | date: '%Y-%m-%d' %}
+Your order will be delivered by {{ delivery_time }}. {% else %} Delivery time
+not available. {% endif %}

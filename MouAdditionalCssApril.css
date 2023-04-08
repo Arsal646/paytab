@@ -1,0 +1,591 @@
+@font-face {
+    font-family: 'frutiger_lt_arabic47LtCn';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-47lightcn-webfont-8a5e2e14-f.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-47lightcn-webfont-36808902-1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'frutiger_lt_arabic57Cn';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-57cn-webfont-5b69dca1-9.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-57cn-webfont-d421f87b-9.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'frutiger_lt_arabic67BdCn';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-67boldcn-webfont-8f6a89a7-a.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-67boldcn-webfont-d08fb6d4-d.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'frutiger_lt_arabic77BlkCn';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-77blackcn-webfont-2b675aff-8.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-77blackcn-webfont-14fcddb1-c.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'tt_normsregular';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/ttnorms-regular-webfont-7192ce79-4.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/ttnorms-regular-webfont-40484f99-8.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'frutiger_lt_arabic45_light';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-45light-webfont-e0bfdcda-8.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-45light-webfont-7479a99e-1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'frutiger_lt_arabic55_roman';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-55roman-webfont-1c75eb59-c.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-55roman-webfont-d9906960-9.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'frutiger_lt_arabic65_bold';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-65bold-webfont-0cd6b03f-f.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-65bold-webfont-93e9bea2-9.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'frutiger_lt_arabic75_black';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-75black-webfont-d0f63b89-9.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/frutigerltarabic-75black-webfont-2a2b90c5-a.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ge_ss_twolight';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/arbfonts-ge-ss-two-light_28_ebrrnht-webfont-fae7957c-a.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/arbfonts-ge-ss-two-light_28_ebrrnht-webfont-fa475a09-f.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ge_ss_twomedium';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/arbfonts-ge_ss_two_medium_5_apjtcpo-webfont-83039ea1-9.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/arbfonts-ge_ss_two_medium_5_apjtcpo-webfont-81e76ae2-e.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ge_ss_twobold';
+    src: url('https://static.mypaydo.shop/media/tatera_kw_430/arbfonts-ge_ss_two_bold_4_k3tvi60-webfont-98f3a426-f.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/tatera_kw_430/arbfonts-ge_ss_two_bold_4_k3tvi60-webfont-bab8bbf3-d.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.ltr * {
+    font-family: 'frutiger_lt_arabic45_light' !important;
+}
+.rtl * {
+    font-family: 'ge_ss_twolight' !important;
+}
+.ltr app-transparent-custom-header ion-label {
+    font-family: 'frutiger_lt_arabic65_bold' !important;
+}
+.rtl app-transparent-custom-header ion-label {
+    font-family: 'ge_ss_twobold' !important;
+}
+.product-name {
+    height: 1.8em !important;
+    font-size: 14px !important;
+}
+.product-name {
+    height: 2.5em;
+    font-size: 14px !important;
+    line-height: 1.25em;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+.text-body-2 {
+    font-size: 14px !important;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Jeko';
+    src: url('https://static.mypaydo.shop/media/zahi_diffuser_544/Jeko-Bold.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/zahi_diffuser_544/Jeko-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Jeko';
+    src: url('https://static.mypaydo.shop/media/zahi_diffuser_544/Jeko-Regular.woff2') format('woff2'),
+        url('https://static.mypaydo.shop/media/zahi_diffuser_544/Jeko-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+    --ion-font-family: 'Jeko', sans-serif;
+}
+.toolbar-container {
+    height: 200px !important;
+}
+.text-body-2 {
+    font-size: 14px !important;
+}
+.text-body-1,
+.text-body-2 {
+    font-size: 14px !important;
+    padding-right: 0rem;
+}
+.text-bold {
+    font-weight: bold;
+    padding-right: 0rem;
+}
+.icon-inner,
+.ionicon,
+svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: black;
+}
+hr {
+    border-width: 0;
+    box-sizing: content-box;
+    height: .5px;
+    background-color: var(--ion-color-light-tint);
+}
+:root(.button-round) {
+    --border-radius: 10px;
+}
+ion-button.button-round {
+    border-radius: 10px !important;
+    --border-radius: 10px !important;
+}
+body {
+    color: #5e5e5e;
+    font-weight: 400;
+    font-family: 'Jeko', Monospace;
+}
+.checkout-button {
+    border-radius: 10px !important;
+}
+.container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+}
+.row>* {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+    color: #000;
+}
+.col {
+    flex: 1 0 0%;
+}
+#support-page-container.page {
+    padding: 0 20px !important;
+}
+.footer-checkout-button.ion-color .text-paragraph {
+    color: #ffffff !important;
+}
+.product-container {
+    border: none !important;
+}
+.footer-container {
+    background: #fff !important;
+}
+.footer-head {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px !important;
+    color: #000;
+}
+.foot-li {
+    margin-bottom: 7px;
+    font-weight: 500;
+    color: #000;
+}
+#element-4-41 {
+    padding: 20px 40px;
+}
+#element-4-41 .swiper-slide {
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 20px;
+}
+#element-4-41 ion-slides {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    transform: perspective(1px) translateZ(0);
+    transition: all .3s ease-in-out;
+}
+#element-4-41 {
+    background: #f7f7f7;
+}
+#element-4-41 .swiper-slide {
+    transform: perspective(1px) translateZ(0);
+}
+#element-4-41 .swiper-slide img {
+    filter: invert(39%) sepia(0) saturate(223%) hue-rotate(172deg) brightness(87%) contrast(83%);
+    transition: all .4s ease-in-out;
+}
+#element-4-41 .swiper-slide:hover {
+    background: #333;
+}
+#element-4-41 .swiper-slide:hover img {
+    filter: invert(100%);
+}
+#element-4-41 .slider-absolute-title {
+    bottom: -2em;
+}
+.product-container .bottom-container {
+    align-items: center !important;
+}
+.bottom-container .product-price {
+    text-align: center !important;
+}
+@media(max-width:676px) {
+    #element-4-41 {
+        padding: 15px 0px;
+    }
+    #element-4-41 ion-slides {
+        padding-top: 15px;
+    }
+    .margin-gap-small-container.ion-padding-button.side-menu-button-parent {
+        padding-left: 15px !important;
+    }
+}
+.menu-container .menu-item ion-icon {}
+.socials {
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+}
+.foot-a {
+    color: #000;
+    display: inline-block;
+}
+.container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;
+    background: #fff;
+}
+.last-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 15px;
+    margin-top: 25px;
+    color: #000;
+}
+.review-order-footer-container {
+    background: white !important;
+}
+@media screen and (min-width: 960px) {
+    .checkout-container {
+        padding: 1.5em 2.5em;
+        background-color: white;
+    }
+}
+.ion-text-start {
+    text-align: center !important;
+}
+ion-label {
+    white-space: normal;
+    text-align: justify;
+}
+.socials {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+.product-name {
+    text-align: center !important;
+}
+.quantity-amount-container {
+    text-align-last: center !important;
+}
+ul {
+    padding-inline-start: 0px !important;
+}
+ul {
+    padding-inline-start: 0px !important;
+}
+.category-container {
+    border: transparent !important;
+    border-radius: 0;
+    text-decoration: none !important;
+}
+.page {
+    min-height: 100vh !important;
+    height: auto !important;
+}
+.menu-container {
+    background: #000000 !important;
+    height: 100%;
+}
+.menu-item ion-label {
+    color: #fff !important;
+    padding: 0px !important;
+}
+.menu-item .img-container ion-icon {
+    --ion-color-base: #fff !important;
+}
+.quantity-amount-container {
+    border-start-start-radius: unset !important;
+    border-end-start-radius: unset !important;
+}
+.quantity-button-right {
+    border-start-end-radius: unset !important;
+    border-end-end-radius: unset !important;
+}
+app-breadcrumbs {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.product-name {
+    text-transform: uppercase !important;
+}
+.ion-text-start.product-name {
+    text-align: center !important;
+}
+#fuse-splash-screen .logo {
+    width: 40px !important;
+    margin: 0 auto;
+}
+.side-menu-button-parent {
+    flex-direction: column !important;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 42px;
+    align-items: start;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.side-menu-button-parent ion-label,
+.side-menu-button-parent ion-icon {
+    color: #fff;
+}
+.side-menu-button-border {
+    border-color: #fff;
+}
+.list-container.ng-tns-c288-2 {
+    align-items: center !important;
+}
+.side-menu-logo-container {
+    place-content: left !important;
+    align-items: left !important;
+    padding: 0px !important;
+    align-self: baseline !important;
+    padding-left: 30px !important;
+}
+side-menu-logo-container {
+    place-content: start !important;
+    align-items: start !important;
+    padding: 0px !important;
+    align-self: baseline !important;
+    padding-left: 55px !important;
+}
+.menu-item ion-label {
+    color: #fff !important;
+    padding-left: 0px !important;
+}
+.logo-container {
+    border-bottom: 0px !important;
+    padding-top: var(--ion-safe-area-top);
+}
+mat-form-field,
+app-custom-ion-item {
+    min-height: 1px !important;
+}
+.side-menu-button-border {
+    border: none !important;
+}
+.menu-item .img-container {
+    width: 0px !important;
+    display: flex;
+    place-content: center;
+    -webkit-margin-end: 16px;
+    margin-inline-end: 16px;
+}
+.ion-text-wrap.sc-ion-label-md-h {
+    line-height: 1 !important;
+    font-size: small !important;
+}
+.sc-ion-label-md-h {
+    line-height: 1 !important;
+    font-size: small !important;
+}
+side-menu-logo-container {
+    padding-left: 28px !important;
+}
+.side-menu-button-border {
+    border-radius: 3px;
+    border: 0px solid var(--ion-color-text) !important;
+    margin-left: -35px;
+}
+.review-order-footer-container {
+    justify-content: center !important;
+    gap: 2em;
+}
+.footer-quantity-container {
+    flex-grow: 0 !important;
+    gap: 2em;
+}
+quantity-button-right-cart {
+    display: none;
+}
+#product-25418 .product-price:before {
+    content: "";
+}
+.gmap_canvas {
+    height: 300px !important;
+}
+@media only screen and (max-width: 676px) {
+    ion-toolbar.header-safe-area {
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+}
+.cart-image {
+    width: 3em !important;
+}
+app-gift-fields-modal .page {
+    min-height: 100% !important;
+}
+ion-grid {
+    padding: 0 200px;
+}
+#dynamic-element-4-12 {
+    margin-bottom: 50px;
+}
+
+#dynamic-element-4-36 {
+    padding: 0 30px;
+}
+
+
+@media(max-width:800px) {
+
+#dynamic-element-4-36 {
+    padding: 0 20px;
+}
+
+    #dynamic-element-4-12 {
+        margin-bottom: 30px
+    }
+    ion-grid {
+        padding: 0 20px;
+    }
+}
+#home-page-container.page {
+    padding-right: 0vw !important;
+    padding-left: 0vw !important;
+}
+.mat-option {
+    padding: 0 10px !important;
+}
+.rtl .menu-label {
+    margin: 8px;
+}
+.sc-ion-label-md-s h2 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.new {
+    font-size: 18px;
+    font-weight: bolder;
+}
+.cart-quantity-badge {
+    margin-left: 2.5em !important;
+    margin-right: 2.5em !important;
+}
+app-home app-products-list:nth-of-type(1) ion-col:nth-of-type(1) app-add-to-cart-button ion-label:after {
+    z-index: 9999;
+}
+app-home app-products-list:nth-of-type(1) ion-col:nth-of-type(1) app-add-to-cart-button ion-label {
+    z-index: -99 !important;
+}
+.location_section a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    display: block !important;
+    padding: 10px 0;
+}
+[_nghost-microapps-c210] .product-brand-name[_ngcontent-microapps-c210] {
+    display: none !important;
+}
+.new {
+    font-size: 18px;
+    font-weight: bolder;
+}
+ion-searchbar#products-list-search-bar {
+    margin: 0 auto !important;
+}
+app-search {
+    display: none !important;
+}
+app-full-width-product span.text-caption {
+    display: none;
+}
+i.flag.sa {
+    display: none !important;
+}
+
+
+
+ion-badge {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 130px;
+    text-overflow: ellipsis;
+}
+
+@media(max-width:800px){
+
+ion-badge {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 240px !important;
+    text-overflow: ellipsis;
+}
+}

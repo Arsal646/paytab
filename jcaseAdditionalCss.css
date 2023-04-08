@@ -1,0 +1,667 @@
+@font-face {
+    font-family: 'myriad_prosemibold';
+    src: url('https://static.mypaydo.shop/media/crushed_337/myriadpro-semibold-webfont-80657d55-3.woff2') format('woff2'),
+         url('https://static.mypaydo.shop/media/crushed_337/myriadpro-semibold-webfont-838c457c-5.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'myriad_prosemibold';
+    src: url('https://static.mypaydo.shop/media/crushed_337/myriadpro-semibold_hcdlltc-webfont-3aa8c0bc-6.woff') format('woff2'),
+         url('https://static.mypaydo.shop/media/crushed_337/myriadpro-semibold_hcdlltc-webfont-44ed878e-d.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'myriad_prolight';
+    src: url('https://static.mypaydo.shop/media/crushed_337/myriadpro-light_nt1qter-webfont-382c1a33-3.woff') format('woff2'),
+         url('https://static.mypaydo.shop/media/crushed_337/myriadpro-light_nt1qter-webfont-38e4658d-6.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'myriad_prolight';
+    src: url('https://static.mypaydo.shop/media/crushed_337/myriadpro-light-webfont-8ae5d80f-3.woff') format('woff2'),
+         url('https://static.mypaydo.shop/media/crushed_337/myriadpro-light-webfont-b20cfc08-8.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*
+ CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+  }
+
+  .tabset .tab-panel {
+    display: none;
+  }
+
+  .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+  .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+  .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+  .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+  .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+  .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+    display: block;
+  }
+
+  /*
+   Styling
+  */
+  /* body {
+    font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+    color: #333;
+    font-weight: 300;
+  } */
+
+  .tabset > label {
+    position: relative;
+    display: inline-block;
+    padding: 15px 15px 25px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .tabset > label::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 22px;
+    height: 4px;
+    background: #8d8d8d;
+  }
+
+  .tabset > label:hover,
+  .tabset > input:focus + label {
+    color: #06c;
+  }
+
+  .tabset > label:hover::after,
+  .tabset > input:focus + label::after,
+  .tabset > input:checked + label::after {
+    background: #06c;
+  }
+
+  .tabset > input:checked + label {
+    border-color: #ccc;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+  }
+
+  .tab-panel {
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  /* body {
+    padding: 30px;
+  } */
+
+  .tabset {
+    max-width: 65em;
+  }
+
+body{
+  font-family: 'myriad_prolight' !important ;
+
+}
+h2,h3{
+font-family: 'myriad_prosemibold' !important ;
+
+}
+
+[_nghost-microapps-c210] .product-name[_ngcontent-microapps-c210]{
+font-family: 'myriad_prosemibold' !important ;
+font-size:16px !important;
+
+}
+ion-label{
+font-family: 'myriad_prosemibold' !important ;
+
+}
+
+.header-safe-area {
+   background: #ffffff;
+}
+:host(.ion-color) .button-native {
+    color: var(--ion-color-base);
+}
+.cart-image {
+    color: #000 !important;
+}.search-icon {
+    color: #000 !important;
+}ion-header .ion-color-text {
+    color: #000 !important;
+}.menu-label {
+    color: #000;
+}
+#support-page-container.page {
+padding: 0 20px !important;
+}
+
+h3 {
+    font-size: 22px;
+    letter-spacing: normal;
+    font-family: Abril Fatface,serif;
+
+}
+
+.ltr .product-price{
+  text-align:center !important;
+  font-family: Abril Fatface,serif;
+
+}
+.rtl .product-price{
+  text-align:center !important;
+}
+.product-price {
+   text-align-last: center !important;
+   font-family: Abril Fatface,serif;
+
+}
+
+.product-brand-name {
+    align-self: center !important;
+  font-family: Abril Fatface,serif;
+
+}
+
+.product-container{
+font-family: Abril Fatface,serif;
+border-radius:0px!important;
+
+
+}
+ .checkout-container{
+    border-top: 1px solid rgba(var(--ion-color-medium-rgb),.3);
+    background-color: white;
+}
+
+
+.category-container{
+border:0.5px solid black !important;
+border-radius: 0px!important;
+  box-shadow: 0px 4px 8px 0 rgb(0 0 0 / 10%);
+font-family: Abril Fatface,serif;
+
+}
+
+.review-order-footer-container {
+    background: white !important;
+}
+
+.product-name{
+ text-align-last: center !important;
+ font-family: Abril Fatface,serif;
+
+}
+
+.product-price {
+   text-align-last: center !important;
+   text-align: center !important;
+   font-family: Abril Fatface,serif;
+
+}
+
+ion-label.product-name.text-body-2 {
+   text-align: center !important;
+   font-family: Abril Fatface,serif;
+
+}
+
+.product-container .bottom-container div:last-child {
+    place-content: center !important;
+    /* align-items: center !important; */
+}
+
+
+
+
+#dynamic-element-4-3 {
+    margin-top: -16px;
+}
+
+#dynamic-element-4-11 {
+     padding:  20px;
+    }
+
+#dynamic-element-4-13 {
+     padding:  20px;
+    }
+   #dynamic-element-1-1 {
+margin-top: -30px;    }
+
+
+ #dynamic-element-4-2 {
+     padding: 0 500px;
+
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+ #dynamic-element-4-3 {
+     padding: 0 300px;
+
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+ #dynamic-element-4-4 {
+     padding: 0 100px;
+
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+@media(max-width:800px){
+
+
+ #dynamic-element-4-2 {
+     padding: 0 20px !important;
+
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+}
+
+ #dynamic-element-4-3 {
+     padding: 0 20px !important;
+
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+}
+ #dynamic-element-4-4 {
+     padding: 0 20px !important;
+
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+}
+#dynamic-element-4-11 {
+    padding:  20px;
+    }
+#dynamic-element-4-13 {
+     padding:  20px;
+    }
+
+    #dynamic-element-1-1 {
+margin-top: -30px;    }
+
+}
+
+
+
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin: 0 0 17.5px;
+    font-family: Abril Fatface,serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+h3, .h3 {
+    font-size: 1.33333em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-family: Abril Fatface,serif;
+
+}
+
+h3 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold !important;
+    font-family: Abril Fatface,serif;
+
+}
+
+.menu-label {
+    margin-top: 2px;
+    height: 1em;
+    font-size: 13px;
+    font-family: Abril Fatface,serif;
+
+}
+
+
+
+hr {
+    height: 0px !important;
+    box-sizing: content-box;
+    width: 70% !important;
+    border: 0.5px solid #8080803d !important;
+}
+
+
+.text-body-2 {
+    font-size: 15px !important;
+    font-weight: bold;
+    font-family: Abril Fatface,serif;
+
+}
+
+.sc-ion-label-md-s h2 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: Abril Fatface,serif;
+
+}
+
+ion-label.product-name.text-body-2 {
+    text-align: center !important;
+    font-size: 13px !important;
+    font-family: Abril Fatface,serif;
+
+}
+
+b, strong {
+    font-weight: bold;
+    letter-spacing: normal;
+    font-family: Abril Fatface,serif;
+
+}
+#dynamic-element-1-10 {
+     padding: 0 !important; ;
+}
+
+
+
+
+@media(min-width:900px){
+.ltr  .logo {
+    height: 56px;
+    cursor: pointer;
+    -webkit-margin-end: 10px;
+    margin-inline-end: 10px;
+    position: absolute;
+   left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+}
+
+.ltr .cart-button.ng-tns-c294-1 {
+    position: absolute;
+    right: 30px;
+}
+
+.ltr app-login-button.ng-tns-c294-1 {
+     position: absolute;
+    right: 90px;
+}
+
+.rtl  .logo {
+    height: 56px;
+    cursor: pointer;
+    -webkit-margin-end: 10px;
+    margin-inline-end: 10px;
+    position: absolute;
+   right: 50%;
+    transform: translate(50%);
+}
+
+.rtl .cart-button.ng-tns-c294-1 {
+    position: absolute;
+    left: 30px;
+}
+
+.rtl app-login-button.ng-tns-c294-1 {
+     position: absolute;
+    left: 90px;;
+}
+
+div#element-4-19 {
+    margin: 100px 0;
+}
+div#element-4-21,#dynamic-element-4-19,#dynamic-element-4-23 {
+    margin: 0 15vw;
+}
+
+}
+.ltr .cart-button.ng-tns-c294-1 {
+    right: 30px;
+}
+
+@media(max-width:800px){
+
+
+app-dynamic-server-element#dynamic-element-4-19 {
+    margin: 30px 0;
+}
+
+}
+.swiper-pagination.swiper-pagination-bullets {
+    position: relative;
+    top: 15px;
+}
+[_nghost-microapps-c214] ion-slides[_ngcontent-microapps-c214] {
+    width: 100%;
+    padding: 10px 0;
+}
+app-breadcrumbs {
+    margin-top: 20px;
+}
+.product-container a {
+    justify-content: center;
+}
+.rtl h3{
+    letter-spacing: normal !important;
+}
+.swiper-pagination.swiper-pagination-bullets {
+    height: 40px;
+}
+.hero_top_content button, .category button {
+        text-decoration: none;
+    color: white;
+    margin: 20px 0;
+    background-color: #41e26a;
+    padding: 10px 80px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+app-mobile-category-card.horizontal-mobile-category  {
+    max-width: 120px !important;
+    min-width: 100px !important;
+}
+app-mobile-category-card.horizontal-mobile-category img {
+    display: none;
+}
+app-mobile-category-card.horizontal-mobile-category ion-label {
+    padding: 0;
+    font-size: 10px !important;
+}
+app-mobile-category-card.horizontal-mobile-category .container{
+justify-content: center !important;
+border-radius: 10px !important;
+height: 40px !important;
+}
+
+
+
+
+
+@media screen and (min-width: 1920px) and (max-width: 5000px)
+div#product-view-page-container {
+    padding: 0 15vw !important;
+}
+}
+
+app-add-to-cart-button{
+position:relative;
+}
+ app-product-view app-external-html-container{
+    margin-top:80px;
+    }
+app-product-view .hr{
+display:none;
+}
+
+
+
+@media(max-width:900px){
+app-product-view app-external-html-container{
+margin-top:50px;
+}
+.category button {
+    padding: 10px 30px !important;
+}
+.category h3 {
+    font-size: 16px;
+}
+mat-tab-group.mat-tab-group.product-reviews {
+    margin-top: 40px !important;
+}
+}
+
+.tabset > label {
+   font-family: 'myriad_prosemibold' !important
+}
+
+*{
+--ion-font-family:myriad_prolight !important
+}
+
+#product-view-page-container app-add-to-cart-button:after {
+    content: "";
+    background: red;
+    width: 200px;
+    height: 100%;
+    min-width: 200px;
+    min-height: 30px;
+    background: url(https://static.mypaydo.shop/media/crushed_kuwait_540/Payment-icon-241473d1-5.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 45px;
+
+background:url(https://static.mypaydo.shop/media/crushed_kuwait_540/icons-a26103a0-f.png);
+  background: url(https://static.mypaydo.shop/media/crushed_kuwait_540/WhatsApp%20Image%202022-10-27%20at%2053530%20PM-4a83d025-4.jpeg);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+app-add-to-cart-button {
+    position: relative;
+}
+
+
+
+.products-list-container{
+    flex-direction: column !important;
+}
+
+ .products-list-container perfect-scrollbar{
+    max-width: 100%; !imporant
+}
+perfect-scrollbar ion-list{
+    display: flex;
+}
+
+ .products-list-container perfect-scrollbar{
+    max-width: 100% !important;
+	max-height: 85px;
+
+}
+
+perfect-scrollbar.categories-container img {
+    display: none;
+}
+
+ion-item .category-item {
+    border: 1px solid;
+    margin: 0 10px;
+}
+.categories-container .category-item ion-thumbnail {
+    display: none;
+}
+ion-item.category-item {
+    border: 1px solid var(--ion-color-primary);
+transition: background-color .5s;
+    margin: 0 10px;
+    height: 40px !important;
+    border-radius: 10px;
+}
+.products-list-container .categories-container {
+    border: none !important;
+}
+ion-item.category-item ion-label.text-title.text-server {
+    font-size: 16px !important;
+}
+a {
+    justify-content: center !important;
+}
+
+
+.product-container a {
+    justify-content: center;
+}
+
+
+a {
+    color: #000000 !important;
+    text-transform: uppercase;
+        text-align-last: center;
+
+}
+
+h3 {
+    color: #0334ff !important;
+    text-transform: uppercase;
+}
+
+
+.bottom-container .product-price, .bottom-container .product-brand-name,.bottom-container .product-name {
+    color: #000000 !important;
+        justify-content: center;
+
+}
+
+.bottom-container {
+    align-items: center !important;
+    justify-content: center;
+}
+
+[_nghost-microapps-c224] .quantity-amount-container-custom-labels[_ngcontent-microapps-c224]{
+  border: none !important;
+  background-color: #ca202b;
+  color: #fff;
+}

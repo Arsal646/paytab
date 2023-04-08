@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quotation</title>
+        <style>
+        * {
+            font-family: Arial,"Times New Roman", serif !important;
+            text-align: left;
+            box-sizing: border-box;
+            font-size:13px;
+        }
+        .MsoNormal{
+        font-size:13px;
+        }
+        @page {
+            size: {
+                    {
+                    pagesize|default: "A4"
+                }
+            }
+
+            ;
+            margin: 2.5cm 1cm 2cm 1.5cm;
+
+            @bottom-left {
+                content: element(footer);
+            }
+
+            @top-left {
+                content: element(header);
+            }
+        }
+
+        #pageFooter:after {
+            counter-increment: page;
+            content: counter(page);
+            margin: 100px;
+        }
+
+        footer {
+            position: running(footer);
+            margin: auto auto;
+            text-align: center;
+            padding: 10px;
+            border-top:1px solid #999;
+            width:18cm;
+        }
+
+        header {
+            position: fixed;
+            position: running(header);
+            left: 0.5in;
+            width: 18cm;
+            border-bottom:1px solid #999;
+        }
+
+        table {
+            width: 100% !important;
+        }
+
+        table u {
+            text-decoration: none !important;
+            border-bottom: 1px solid black;
+        }
+
+        .general_term {
+            font-family: "Times New Roman", serif !important;
+        }
+
+        .general_term u {
+            font-family: "Times New Roman", serif !important;
+            font-size: 14px !important;
+            text-decoration: none !important;
+            border-bottom: 1px solid black !important;
+            font-weight: bold;
+        }
+
+        .general_term blockquote {
+            font-family: "Times New Roman", serif !important;
+            font-size: 14px !important;
+            margin-right: -1.8pt;
+            margin-top: 2px;
+        }
+
+        .general_term p {
+            font-family: "Times New Roman", serif !important;
+            font-size: 14px !important;
+            margin-right: -1.8pt;
+        }
+
+        .general_term li {
+            font-family: "Times New Roman", serif !important;
+            font-size: 14px !important;
+            margin-right: -1.8pt;
+        }
+
+        .common_font_size {
+            font-size: 14px !important;
+            margin-right: -1.8pt;
+        }
+        table {
+            border-collapse: collapse;
+        }
+
+        .info_table td, .info_table th {
+            padding: 5px;
+            border: 1px solid #999;
+        }
+        .signature_table td, .signature_table th {
+            width:50%;
+            padding: 5px;
+            border: 1px solid #999;
+        }
+        .first_table td:nth-child(1){
+        width:20% !important;
+        }
+          .first_table td:nth-child(2){
+        width:80% !important;
+        }
+
+        .last_table_info td {
+            padding: 5px;
+        }
+
+        p {
+            margin: 0 !important;
+            line-height: 20px;
+        }
+
+        * {
+            font-size: 14px !important;
+        }
+
+        table td span {
+            font-size: 12px !important;
+        }
+
+        ul {
+            margin: 10px !important;
+        }
+
+        footer p{
+            font-size: 12px !important;
+
+            text-align:center;
+        }
+        .contract_heading h3{
+            text-align: center;
+        }
+        .nested_table td{
+            border: none !important;
+        }
+        .first_table .nested_table td:nth-child(1) {
+            width: 8% !important;
+        }
+        .first_table .nested_table td:nth-child(2) {
+           border-bottom: 1px solid #999 !important;
+        }
+        .vehicle_detail_table th {
+            width: 20% !important;
+        }
+        .vehicle_detail_table td {
+            padding: 5px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="head_section" style="display: flex; justify-content:
+                space-between;align-items: center;">
+                <img style="width: 200px;" src="file://{{ icon }}" alt="image
+                    not found">
+                <!-- <p>
+                <span>Reference:
+                    {{quotation.reference}}</span>
+                    <br/>
+                    <span>Date:{{quotation.quotation_date | date:"d/m/Y"}}</span>
+                </p> -->
+            </div>
+        </header>
+        <!-- <footer id="pageFooter" style="margin:50px 0;text-align: center;margin: 20px auto;">
+        <p style='margin:0in;font-size: 12px !important;text-align:center; margin-top: 50px; margin-bottom: 10px;'>
+            <span style="font-size: 12px !important;">{{configuration.company_name}},&ndash;U.A.E Tel: +
+                {{configuration.company_mobile_number}} Fax: {{configuration.company_fax_number}}</span>
+        </p><p><a
+                href="mailto:info@avluae.com"><span style="font-size: 12px !important;text-decoration: none;">
+                    {{configuration.company_email}}</span></a><span style="color:blue;"><span
+                    style="font-size: 12px !important;">, <span>&nbsp; </span>
+                    {{configuration.company_secondary_email}}</span></span> <span>   </span>&nbsp; <span
+                style="font-size: 12px !important;">{{configuration.company_website}}</span>
+        </p>
+    </footer> -->
+        <div class="contract_heading">
+            <h3>Lease</h3>
+        </div>
+        <br/>
+            <table border="1" class="info_table first_table">
+                <tr>
+                    <th align="left">
+                        <span>Lease Contract No</span>
+                    </th>
+                    <td align="right">
+                        <span>AVL/HT/VA/IS-T6/M-56525/0111/2022</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="left">
+                        <span>Lessee</span>
+                    </th>
+                    <td align="right">
+                        <div>
+                            <table class="nested_table">
+                                <tr>
+                                    <td>
+                                        <p>M/s. ________________________</p>
+                                    </td>
+
+                                </tr>
+                            </table>
+                            <div style="padding: 5px;">
+                                <p>P.O. Box 73021</p>
+                                <p>Dubai – U.A.E. </p>
+                            </div>
+                            <div>
+                                <table class="nested_table">
+                                    <tr>
+                                        <td style="width: 10%;">
+                                            <p>tel: ________________________</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Fax:________________________</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Contact:________________________</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="left">
+                        <span>Lessor</span>
+                    </th>
+                    <td align="right">
+                        <div>
+                            <table class="nested_table">
+                                <tr>
+                                    <td>
+                                        <p>M/s. AVL General Land Transport LLC.</p>
+                                    </td>
+
+                                </tr>
+                            </table>
+                            <div style="padding: 5px;">
+                                <p>P.O. Box 73021</p>
+                                <p>Dubai – U.A.E. </p>
+                            </div>
+                            <div>
+                                <table class="nested_table">
+                                    <tr>
+                                        <td style="width: 10%;">
+                                            <p>tel:________________________</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Fax:________________________</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Contact:________________________</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+                <div class="primary_term common_font_size">
+                    <div>
+                        This Lease Contract No. <b>AVL/HT/VA/IS-T6/M-56525/0111/2022</b>
+                        is made for a Refrigerated Pick-up on November 01, 2022
+                        between M/s. AVL General Land Transport L.L.C. whose
+                        registered office is at P.O. Box 119735, Dubai - U.A.E.
+                        (which expression shall include its successors and
+                        assigns) hereinafter called “Lessor” and M/s.
+                        ____________. hereinafter called “Lessee”.
+                    </div>
+                </div>
+                <p>
+                    <span>Our simplified terms and conditions are attached. We
+                        trust the above meets
+                        with your approval and should you have any further
+                        queries, please do not hesitate to contact us.</span>
+                </p>
+                <p>
+                    <span>Thanking you and assuring you of our best services at
+                        all times.</span>
+                </p>
+                <h3 style="font-weight: bold; margin: 15px 0 !important;text-decoration: underline;text-align: center;">
+                    AVL General Land Transport L.L.C
+                    Lease Contract for a Refrigerated Truck
+                </h3>
+                <div class="general_term">
+                    <div> <u>Article 1: Insurance</u><blockquote><p>
+
+                                All lessor’s leased vehicles are insured
+                                including against third party liability
+                                in respect of death and bodily injury with an
+                                excess of Dhs.2,000/= (UAE Dirhams: Two Thousand
+                                only) each
+                                claim. Accordingly in respect of every claim
+                                under the insurance policy which is not rejected
+                                / objected to
+                                by the insurer, the lessee will pay the first
+                                Dhs.2,000/= of the cost of repairs to the
+                                lessor.
+
+                                Please bear in mind that the insurance is null
+                                and void if the driver is found to
+                                be negligent or in Contravention of the U.A.E.
+                                traffic and insurance rules e.g. drink and
+                                driving.
+
+                                Notwithstanding the insurance cover the lessee
+                                remains fully liable to pay all
+                                costs, damages, etc. to the lessor arising
+                                directly or indirectly due to the lessee’s gross
+                                negligence or
+                                contravention of the terms of this Lease
+                                Contract, local regulations or the conditions of
+                                the insurance
+                                policy in respect of the leased vehicle. The
+                                lessee expressly accepts that he is aware of all
+                                such
+                                regulations and conditions referred to above
+                            </p></blockquote> </div>
+                    <div> <u>Article 1: Insurance</u><blockquote><p>
+
+                                All lessor’s leased vehicles are insured
+                                including against third party liability
+                                in respect of death and bodily injury with an
+                                excess of Dhs.2,000/= (UAE Dirhams: Two Thousand
+                                only) each
+                                claim. Accordingly in respect of every claim
+                                under the insurance policy which is not rejected
+                                / objected to
+                                by the insurer, the lessee will pay the first
+                                Dhs.2,000/= of the cost of repairs to the
+                                lessor.
+
+                                Please bear in mind that the insurance is null
+                                and void if the driver is found to
+                                be negligent or in Contravention of the U.A.E.
+                                traffic and insurance rules e.g. drink and
+                                driving.
+
+                                Notwithstanding the insurance cover the lessee
+                                remains fully liable to pay all
+                                costs, damages, etc. to the lessor arising
+                                directly or indirectly due to the lessee’s gross
+                                negligence or
+                                contravention of the terms of this Lease
+                                Contract, local regulations or the conditions of
+                                the insurance
+                                policy in respect of the leased vehicle. The
+                                lessee expressly accepts that he is aware of all
+                                such
+                                regulations and conditions referred to above
+                            </p></blockquote> </div>
+                    <div> <u>Article 1: Insurance</u><blockquote><p>
+
+                                All lessor’s leased vehicles are insured
+                                including against third party liability
+                                in respect of death and bodily injury with an
+                                excess of Dhs.2,000/= (UAE Dirhams: Two Thousand
+                                only) each
+                                claim. Accordingly in respect of every claim
+                                under the insurance policy which is not rejected
+                                / objected to
+                                by the insurer, the lessee will pay the first
+                                Dhs.2,000/= of the cost of repairs to the
+                                lessor.
+
+                                Please bear in mind that the insurance is null
+                                and void if the driver is found to
+                                be negligent or in Contravention of the U.A.E.
+                                traffic and insurance rules e.g. drink and
+                                driving.
+
+                                Notwithstanding the insurance cover the lessee
+                                remains fully liable to pay all
+                                costs, damages, etc. to the lessor arising
+                                directly or indirectly due to the lessee’s gross
+                                negligence or
+                                contravention of the terms of this Lease
+                                Contract, local regulations or the conditions of
+                                the insurance
+                                policy in respect of the leased vehicle. The
+                                lessee expressly accepts that he is aware of all
+                                such
+                                regulations and conditions referred to above
+                            </p></blockquote> </div>
+                    <div> <u>Article 1: Insurance</u><blockquote><p>
+
+                                All lessor’s leased vehicles are insured
+                                including against third party liability
+                                in respect of death and bodily injury with an
+                                excess of Dhs.2,000/= (UAE Dirhams: Two Thousand
+                                only) each
+                                claim. Accordingly in respect of every claim
+                                under the insurance policy which is not rejected
+                                / objected to
+                                by the insurer, the lessee will pay the first
+                                Dhs.2,000/= of the cost of repairs to the
+                                lessor.
+
+                                Please bear in mind that the insurance is null
+                                and void if the driver is found to
+                                be negligent or in Contravention of the U.A.E.
+                                traffic and insurance rules e.g. drink and
+                                driving.
+
+                                Notwithstanding the insurance cover the lessee
+                                remains fully liable to pay all
+                                costs, damages, etc. to the lessor arising
+                                directly or indirectly due to the lessee’s gross
+                                negligence or
+                                contravention of the terms of this Lease
+                                Contract, local regulations or the conditions of
+                                the insurance
+                                policy in respect of the leased vehicle. The
+                                lessee expressly accepts that he is aware of all
+                                such
+                                regulations and conditions referred to above
+                            </p></blockquote> </div>
+                    <div> <u>Article 1: Insurance</u><blockquote><p>
+
+                                All lessor’s leased vehicles are insured
+                                including against third party liability
+                                in respect of death and bodily injury with an
+                                excess of Dhs.2,000/= (UAE Dirhams: Two Thousand
+                                only) each
+                                claim. Accordingly in respect of every claim
+                                under the insurance policy which is not rejected
+                                / objected to
+                                by the insurer, the lessee will pay the first
+                                Dhs.2,000/= of the cost of repairs to the
+                                lessor.
+
+                                Please bear in mind that the insurance is null
+                                and void if the driver is found to
+                                be negligent or in Contravention of the U.A.E.
+                                traffic and insurance rules e.g. drink and
+                                driving.
+
+                                Notwithstanding the insurance cover the lessee
+                                remains fully liable to pay all
+                                costs, damages, etc. to the lessor arising
+                                directly or indirectly due to the lessee’s gross
+                                negligence or
+                                contravention of the terms of this Lease
+                                Contract, local regulations or the conditions of
+                                the insurance
+                                policy in respect of the leased vehicle. The
+                                lessee expressly accepts that he is aware of all
+                                such
+                                regulations and conditions referred to above
+                            </p></blockquote> </div>
+                </div>
+                <br/>
+                    <p>
+                        <span>Please Note: Please ensure that your drivers and
+                            company comply
+                            with the current regulations of the Food Control
+                            Section of the Dubai Municipality/RTA. Any fines or
+                            penalties for non-compliance with the Food Control
+                            Section of the
+                            Dubai Municipality/RTA will be the sole
+                            responsibility of your company.</span>
+                    </p>
+                    <br/>
+                    <h3 style="font-weight: bold; margin: 15px 0 !important;text-decoration: underline;text-align: center;">
+                        Annexure to Lease Agreement No. AVL/HT/VA/IS-T6/M-56525/0111/2022
+                    </h3>
+
+                            <table style="border-collapse:collapse;width:
+                                100%;margin-top: 10px;"
+                                class="vehicle_detail_table" border="1">
+                                <tr>
+                                    <th rowspan="8">Vehicle Details:</th>
+                                </tr>
+                                <tr>
+                                    <td>Reg. No : DXB (M) 56525 </td>
+                                </tr>
+                                <tr>
+                                    <td>Chassis No. : 7777</td>
+                                </tr>
+                                <tr>
+                                    <td>Engine No. : 554433</td>
+                                </tr>
+                                <tr>
+                                    <td> Coloir : White </td>
+                                </tr>
+                                <tr>
+                                    <td>Year Model : 2015 </td>
+                                </tr>
+                                <tr>
+                                    <td>Lease Start : 2015 </td>
+                                </tr>
+                                <tr>
+                                    <td>Lease End : 2015 </td>
+                                </tr>
+
+
+
+
+                                <tr>
+                                    <th rowspan="6">Company Details</th>
+                                </tr>
+                                <tr>
+                                    <td>Name :M/s </td>
+                                </tr>
+                                <tr>
+                                    <td>Address :Dubai </td>
+                                </tr>
+                                <tr>
+                                    <td>Tel :04-8052071 </td>
+                                </tr>
+                                <tr>
+                                    <td>Fax :04-8052071 </td>
+                                </tr>
+                                <tr>
+                                    <td>Contact :04-8052071 </td>
+                                </tr>
+
+
+
+
+
+                                <tr>
+                                    <th rowspan="5">Return of the Vehicle Upon
+                                        Expiry of Use Period
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>Name :M/s </td>
+                                </tr>
+                                <tr>
+                                    <td>Address :Dubai </td>
+                                </tr>
+                                <tr>
+                                    <td>Tel :04-8052071 </td>
+                                </tr>
+                                <tr>
+                                    <td>Fax :04-8052071 </td>
+                                </tr>
+                                <tr>
+                                    <td>Contact :04-8052071 </td>
+                                </tr>
+
+                            </table>
+                            <br/>
+                                <table style="border-collapse:collapse;width:
+                                    100%;margin-top: 10px;" border="1"
+                                    class="signature_table">
+                                    <tr>
+                                        <th>
+                                            <p style="text-align:center">
+                                                <span>
+                                                    LESSEE
+                                                </span>
+                                            </p>
+                                        </th>
+                                        <th>
+                                            <p style="text-align:center">
+                                                <span>
+                                                    LESSOR
+                                                </span>
+                                            </p>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                <span>M/s.
+                                                    </span>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p>
+                                                <span>M/s. AVL General Land Transport L.L.C.</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                <span>Name:
+                                                    </span>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    <span>By: Mr. Shaun Cooper / Vaspar Anklesaria</span>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 60px 0;">
+                                                <p>
+                                                    <span></span>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        <span>Signature:
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        <span>Signature:
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        <span>Date:
+                                                            {{quotation.quotation_date
+                                                            | date:"d/m/Y"}}</span>
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        <span>Date:
+                                                            {{quotation.quotation_date
+                                                            | date:"d/m/Y"}}</span>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        <p>
+                                            <strong><span
+                                                    style="text-decoration:
+                                                    none;border-bottom:1px
+                                                    solid">Please
+                                                    Note:</span></strong>
+                                        </p>
+
+                                        <div class="common_font_size">
+                                            <div><ul>
+                                                <li>Sign and Stamp the attached quotation and arrange PDC cheques before collection
+                                                        of the vehicles
+                                                </li>
+                                            </ul></div>
+                                            <div><ul>
+                                                <li>Sign and Stamp the attached quotation and arrange PDC cheques before collection
+                                                        of the vehicles
+                                                </li>
+                                            </ul></div>
+                                        </div>
+                                    </body>
+
+                                </html>

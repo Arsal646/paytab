@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+          table{
+            width: 100%;
+          }
+            table,
+            td {
+            border: solid 1px black;
+            text-align: center;
+            border-collapse: collapse;
+            font-size: 10px !important;
+            }
+
+            .bold~tr td {
+            border: solid 1px lightgray;
+            }
+
+            /* td {
+            padding: 0.5em;
+            } */
+
+            [colspan="4"][rowspan="2"] {
+            height: 6em;
+            }
+            tr.noRowBorder td {
+              /* border: 0; */
+              border-top: 0;
+              border-bottom: 0;
+            }
+            tr.noBorder td {
+              border: 0;
+            }
+            table td{
+              max-width: 300px;
+            word-wrap: break-word;
+            overflow: hidden;
+            }
+            .invoice_log *,.invoice_head *{
+              padding: 0;
+              margin: 0;
+            }
+            table, tr, td, th, tbody, thead, tfoot {
+                page-break-inside: avoid !important;
+            }
+            p {
+              text-align: left;
+            }
+            header {
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+            }
+
+            footer {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              right: 0;
+            }
+            @media print {
+              @page {
+                margin: 1cm;
+                size: A4 landscape;
+                /* or use a custom size */
+                /* size: 210mm 297mm; */
+                /* or use letter size */
+                /* size: 8.5in 11in; */
+                /* or use legal size */
+                /* size: 8.5in 14in; */
+                /* etc. */
+
+                /* display header and footer on each page */
+                @top-center {
+                  content: element(header);
+                }
+                @bottom-center {
+                  content: element(footer);
+                }
+              }
+            }
+        </style>
+    <body>
+      <header>
+        <h2>header</h2>
+      </header>
+      <table>
+        <!-- <tr class=invoice_logo>
+                <td  colspan="8" style="border:none;text-align:left;">
+                  <img src="file://{{ icon }}" style="height:60px; text-align: left;"  padding="100px">
+                </td>
+              </tr>
+              <tr class="ivoice_head">
+                <td style="border:none;text-align: center;width: 100%;" colspan="8">
+                  <p><b>Order</b></p>
+                </td>
+              </tr> -->
+        <tr>
+          <td colspan="8">
+            <div style="text-align: left;">
+              <img src="file://{{ icon }}" style="height:60px; text-align:
+                left;">
+            </div>
+            <div style="text-align: center;"> <b>LEASE CONTRACT</b></div>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td colspan="4">
+            Lease Contract No
+          </td>
+          <td colspan="4">
+            AVL/HT/VA/IS-T6/M-56525/0111/2022
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="4">
+            Lessee
+          </td>
+          <td colspan="4">
+            <p> Asnad </p>
+            <p>P.O. Box 73021</p>
+            <p>Dubai – U.A.E. </p>
+            <p>Tel : 04</p>
+            <p>Fax : 04</p>
+            <p>Contact : Mr. </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="4">
+            Lessor
+          </td>
+          <td colspan="4">
+            <p>M/s. AVL General Land Transport LLC.</p>
+            <p>P. O Box 119735</p>
+            <p>Um Ramool, Rashidiya</p>
+            <p>Dubai – U.A.E</p>
+            <p>Tel : 04 2859158</p>
+            <p>Fax : 04 2857545</p>
+            <p>Contact : Vaspar Anklesaria </p>
+          </td>
+        </tr>
+
+        <!-- <tr>
+                  <td colspan="8">
+                    This Lease Contract No. AVL/HT/VA/IS-T6/M-56525/0111/2022 is made for a Refrigerated Pick-up on  November 01, 2022 between M/s. AVL General Land Transport L.L.C. whose registered office is at P.O. Box 119735, Dubai - U.A.E. (which expression shall include its successors and assigns) hereinafter called “Lessor” and M/s. ____________. hereinafter called “Lessee”.
+                  </td>
+                </tr> -->
+      </table>
+
+      <div>
+        This Lease Contract No. AVL/HT/VA/IS-T6/M-56525/0111/2022 is made for a
+        Refrigerated Pick-up on November 01, 2022 between M/s. AVL General Land
+        Transport L.L.C. whose registered office is at P.O. Box 119735, Dubai -
+        U.A.E. (which expression shall include its successors and assigns)
+        hereinafter called “Lessor” and M/s. ____________. hereinafter called
+        “Lessee”.
+      </div>
+
+      <p>
+        <span>AVL General Land Transport L.L.C
+          Lease Contract for a Refrigerated Truck </span>
+      </p>
+      <div class="primary_term common_font_size">
+        <!-- {% for primary_terms in quotation.primary_terms_and_conditions %}
+                <div>
+                    {{primary_terms | safe}}
+                </div>
+                {% endfor %} -->
+        <div>
+          Article 01: Delivery
+          Delivery of the leased vehicle will only take place after the receipt
+          of the one (1) month payment in advance. Upon acceptance and receipt
+          of the above payment, the Lessor will process the order for the
+          vehicle. The lease period will start from the day of delivery of the
+          vehicle to the Lessee.
+
+          The lease period shall be for a period of five (05) years starting
+          from date of delivery of vehicle to Lessee. The lease charge is Dhs.
+          5,900.00 per month excluding VAT
+        </div>
+
+        <di>
+          Article 02: Payment
+          For new lease vehicles LPO required from _______, LPO is consider as
+          confirm order and it is applicable of all contract terms. One Current
+          dated cheque with 1 month rent. 3 months undated security cheque, and
+          all subsequent payments will made monthly and the same will settled
+          immediately.
+        </di>
+      </div>
+    </body>
+  </head>
+</html>

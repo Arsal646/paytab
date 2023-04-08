@@ -1,26 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hi</title>
+<!-- INCLUDE SESSION.JS JAVASCRIPT LIBRARY -->
+<script src="https://ap-gateway.mastercard.com/form/version/70/merchant/TEST855212000/session.js"></script>
+<!-- APPLY CLICK-JACKING STYLING AND HIDE CONTENTS OF THE PAGE -->
+<style id="antiClickjack">body{display:none !important;}</style>
 </head>
-
 <body>
 
+<!-- CREATE THE HTML FOR THE PAYMENT PAGE -->
 
-    <div id="initiate3dsSimpleRedirect" xmlns="http://www.w3.org/1999/html"> <iframe id="methodFrame" name="methodFrame"
-            height="500" width="500"> </iframe>
-        <form id="initiate3dsSimpleRedirectForm" method="POST"
-            action="https://ap.gateway.mastercard.com/acs/mastercard/v2/method" target="methodFrame"> <input
-                type="hidden" name="threeDSMethodData"
-                value="eyJ0aHJlZURTTWV0aG9kTm90aWZpY2F0aW9uVVJMIjoiaHR0cHM6Ly9hcC5nYXRld2F5Lm1hc3RlcmNhcmQuY29tL2NhbGxiYWNrSW50ZXJmYWNlL2dhdGV3YXkvMTgzMjBjMjRjMzZjNzY3NzRiOTEyOWViOTNhYTRhNjA4OTMxN2YzYTNiMzcxNzc5YWU3NmRmNmExMjFmM2ZmNiIsInRocmVlRFNTZXJ2ZXJUcmFuc0lEIjoiYzQzNjMxM2ItZTAyYy00MWJjLTkxYzktYjI4Y2RmNmNjMWMyIn0=" />
-        </form>
-        <script
-            id="initiate-authentication-script"> var e = document.getElementById("initiate3dsSimpleRedirectForm"); if (e) { e.submit(); if (e.parentNode !== null) { e.parentNode.removeChild(e); } } </script>
-    </div>
-</body>
+<div>Please enter your payment details:</div>
 
-</html>
+<div>Card Number: <input type="text" id="card-number" class="input-field" title="card number" aria-label="enter your card number" value="" tabindex="1" readonly></div>
+
+<div>Expiry Month:
+<select id="expiry-month" class="form-control input-md" required="" readonly>
+	<option value="">Select Month</option>
+	<option value="01">January</option>
+	<option value="02">February</option>
+	<option value="03">March</option>
+	<option value="04">April</option>
+	<option value="05">May</option>
+	<option value="06">June</option>
+	<option value="07">July</option>
+	<option value="08">August</option>
+	<option value="09">September</option>
+	<option value="10">October</option>
+	<option value="11">November</option>
+	<option value="12">December</option>
+</select>
+</div>
+<div>Expiry Year:
+<select id="expiry-year" class="form-control input-md" required="" readonly>
+	<option value="">Select Year</option>
+	<option>21</option>
+	<option>22</option>
+	<option>23</option>
+	<option>24</option>
+	<option>25</option>
+	<option>26</option>
+	<option>27</option>
+	<option>28</option>
+	<option>29</option>
+	<option>30</option>
+	<option>31</option>
+	<option>32</option>
+	<option>33</option>
+	<option>34</option>
+	<option>35</option>
+	<option>36</option>
+	<option>37</option>
+	<option>38</option>
+	<option>39</option>
+</select>
+</div>
+<div>Security Code:<input type="text" id="security-code" class="input-field" title="security code" aria-label="three digit CCV security code" value="" tabindex="4" readonly></div>
+
+<div>Cardholder Name:<input type="text" id="cardholder-name" class="input-field" title="cardholder name" aria-label="enter name on card" value="" tabindex="3" readonly></div>
+
+<div><button id="payButton" onclick="pay();">Pay Now</button></div>
+
+<!-- JAVASCRIPT FRAME-BREAKER CODE TO PROVIDE PROTECTION AGAINST IFRAME CLICK-JACKING -->
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+
+    PaymentSession.configure({
+        session: "<your_session_ID>",
+        fields: {
+            // ATTACH HOSTED FIELDS TO YOUR PAYMENT PAGE FOR A CREDIT CARD
+            card: {
+                number: "#card-number",
+                securityCode: "#security-code",
+                expiryMonth: "#expiry-month",
+                expiryYear: "#expiry-year",
+                nameOnCard: "#cardholder-name"
+            }
+        },
+        //SPECIFY YOUR MITIGATION OPTION HERE
+        frameEmbeddingMitigation: ["javascript"],
+        callbacks: {
+            initialized: function(response) {
+                // HANDLE INITIALIZATION RESPONSE
+            },
+            formSessionUpdate: function(response) {
+                // HANDLE RESPONSE FOR UPDATE SESSION
+                if (response.status) {
+                    if ("ok" == response.status) {
+                        console.log("Session updated with data: " + response.session.id);
+
+                        //check if the security code was provided by the user
+                        if (response.sourceOfFunds.provided.card.securityCode) {
+                            console.log("Security code was provided.");
+                        }
+
+                        //check if the user entered a Mastercard credit card
+                        if (response.sourceOfFunds.provided.card.scheme == 'MASTERCARD') {
+                            console.log("The user entered a Mastercard credit card.")
+                        }
+                    } else if ("fields_in_error" == response.status)  {
+
+                        console.log("Session update failed with field errors.");
+                        if (response.errors.cardNumber) {
+                            console.log("Card number invalid or missing.");
+                        }
+                        if (response.errors.expiryYear) {
+                            console.log("Expiry year invalid or missing.");
+                        }
+                        if (response.errors.expiryMonth) {
+                            console.log("Expiry month invalid or missing.");
+                        }
+                        if (response.errors.securityCode) {
+                            console.log("Security code invalid.");
+                        }
+                    } else if ("request_timeout" == response.status)  {
+                        console.log("Session update failed with request timeout: " + response.errors.message);
+                    } else if ("system_error" == response.status)  {
+                        console.log("Session update failed with system error: " + response.errors.message);
+                    }
+                } else {
+                    console.log("Session update failed: " + response);
+                }
+            }
+        },
+        interaction: {
+            displayControl: {
+                formatCard: "EMBOSSED",
+                invalidFieldCharacters: "REJECT"
+            }
+        }
+     });
+
+    function pay() {
+        // UPDATE THE SESSION WITH THE INPUT FROM HOSTED FIELDS
+        PaymentSession.updateSessionFromForm('card');
+    }
+    </script>
+    </body>
+    </html>
